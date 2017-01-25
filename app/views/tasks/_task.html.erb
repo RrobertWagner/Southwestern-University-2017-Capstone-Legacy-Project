@@ -1,0 +1,8 @@
+<li id="task-<%= task.id %>">
+  <span class="Prompt"><%= task.prompt %></span>
+  <span class="pointReward">Points: <%= task.points %></span>
+  <%if task.task_type == 0%>
+  	<br>
+  	<span>Correct answer: <%= task.correct_answer %></span>
+  <%end%>
+</li>

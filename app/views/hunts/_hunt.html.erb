@@ -1,0 +1,11 @@
+<li id="hunt-<%= hunt.id %>">
+  <span class="title"><%=link_to hunt.title, hunt %></span>
+  <!--<% unless hunt.pirate_hunts.exists?(:user_id => current_user.id)%>
+  You can join this hunt!
+  <%end%>-->
+  <span class="author">Created by <%=hunt.user.display_name%>.</span>
+  <span class="description"><%= hunt.description %></span>
+  <span class="timestamp">
+    Created <%= time_ago_in_words(hunt.created_at) %> ago.
+  </span>
+</li>

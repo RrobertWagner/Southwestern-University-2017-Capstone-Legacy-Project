@@ -1,0 +1,67 @@
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+			<div class="text-center">
+				<!-- Create a Hunt Icon --->
+				<%=image_tag("paintbrush.svg", :class => "img-circle")%>
+
+			</div>
+<div class="row">
+	<div class="container">
+		<div class= "col-md-10 col-md-offset-1">
+
+			
+
+			<h3>Let's create a hunt</h3>
+			<br>
+			<%= form_for(@hunt) do |f| %>
+					  
+					  <%= f.label :title, "*Title"%>
+					  <%= f.text_field :title %>
+					  <br>
+
+					  
+				
+						  <%= f.hidden_field :active, :value => false %>
+					  
+						  <%= f.hidden_field :published, :value => false %>
+						  
+						  <%= f.hidden_field :public, :value => true %>
+					  
+					  
+					  <%= f.label :start_date, "*Start Date" %>
+					  <%= f.date_field :start_date %>
+					  <br>
+					  <%= f.label :start_time, "*Begins at"%>
+					  <%= f.time_field :start_time %>
+					  <br>
+					  <%= f.label :end_date, "*End Date" %>
+					  <%= f.date_field :end_date %>
+					  <br>
+					  <%= f.label :end_time, "*Ends at"%>
+					  <%= f.time_field :end_time %>
+					  <br>
+					  <%= f.label :start_location, "Start Location"%>
+					  <%= f.text_field :start_location%>
+					  <br>
+					  <%= f.label :description, "Description"%>
+					  <%= f.text_field :description%>
+					  <br>
+					  <%= "*=Required" %><br>
+					  <%= f.hidden_field :user_id, :value => current_user.id%>
+					  <%= f.hidden_field :created_at%>
+					  <%= f.hidden_field :updated_at%>
+					  <br>
+					
+					  <%= f.submit "Create Hunt", class: "btn btn-capstone btn-block" %>
+					 
+					<% end %>
+				</div>
+			</div>
+		</div>
+
+
+
+

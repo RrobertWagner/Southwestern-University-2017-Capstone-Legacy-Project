@@ -1,0 +1,207 @@
+<head> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<title>FAQ</title>
+
+<%= render 'layouts/altNavBar' %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	
+<!-- I took the following FAQ example from http://www.prepbootstrap.com/bootstrap-template/faq-example -->
+<div class="container">
+    <br />
+    <br />
+    <br />
+
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        This section contains a wealth of information related to the web app. For a tutorial with screen shots please visit our demo page.  
+    </div>
+
+    <br />
+
+    <div class="panel-group" id="accordion">
+        <div class="faqHeader">Frequently Asked Questions</div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+					Is account registration required?
+					</a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    In order to access any of the features of our app, an account is required. In order to register we need an email, password and display name. 
+					We do not send spam content and do not share email addresses. 
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Can I change my display name?</a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                   Yes! Your display name, and password can be changed at any time by editing your profile. This can be done by selecting the dropdown menu 
+				   on the navigation bar at the top of your screen (These buttons have a small triangle next to them if they drop down) and clicking "Edit Profile". 
+                </div>
+            </div>
+        </div>
+		
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">My hunt is active. Why can’t anyone join it? </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                   Other users cannot join your hunt if the hunt is not published. If you want others to join, go to your “my hunts” page, select your hunt and click the “publish hunt” button. 
+                </div>
+            </div>
+        </div>
+		
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">I want to make changes to my hunt. Why can’t I edit it?</a>
+                </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse">
+                <div class="panel-body">
+                   You cannot make changes to your hunt once the hunt becomes active. You can only edit your hunt while it is inactive.
+                </div>
+            </div>
+        </div>
+		
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Is there a limit to how many hunts or tasks I can create?</a>
+                </h4>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse">
+                <div class="panel-body">
+                   No, there is no limit to how many hunts  or tasks you can create. You can create new hunts or edit old ones that are inactive.
+                </div>
+            </div>
+        </div>
+		
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Will my email be viewable to other users?</a>
+                </h4>
+            </div>
+            <div id="collapseSix" class="panel-collapse collapse">
+                <div class="panel-body">
+                   No! Your email is private and users will only be able to see your display name.
+                </div>
+            </div>
+        </div>
+		
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">I am sure I answered the Question and Answer task correctly. Why is it marking my answer as incorrect?</a>
+                </h4>
+            </div>
+            <div id="collapseSeven" class="panel-collapse collapse">
+                <div class="panel-body">
+                   Answers for the Question and Answer task are case-sensitive. The response “mood bridwell” might be accepted as a correct answer while the response “Mood Bridwell” 
+				   would be accepted as an incorrect answer. Similarly, the response “four” might be accepted as a correct answer while the response “4” would be accepted as an
+				   incorrect answer. Don’t forget! The hunt creator can resolve this problem by using the clue field of the tasks to specify the format of the correct answer. 
+                </div>
+            </div>
+        </div>
+		
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">Can I make a hunt inactive after I have activated it?</a>
+                </h4>
+            </div>
+            <div id="collapseEight" class="panel-collapse collapse">
+                <div class="panel-body">
+                  No! A hunt will automatically become inactive after the time window under which it should be played has passed. (currently a desired feature)
+                </div>
+            </div>
+        </div>
+		
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">Which web browsers can I use to access the application?</a>
+                </h4>
+            </div>
+            <div id="collapseNine" class="panel-collapse collapse">
+                <div class="panel-body">
+                  You can currently use the application on Chrome, Safari and Internet Explorer. The application was designed to be cross-platform.
+                </div>
+            </div>
+        </div>
+		
+		
+        
+
+<style>
+    .faqHeader {
+        font-size: 27px;
+        margin: 20px;
+    }
+     /*
+    .panel-heading [data-toggle="collapse"]:after {
+        font-family: 'Glyphicons Halflings';
+        content: "e072"; /* "play" icon */
+        float: right;
+        color: #F58723;
+        font-size: 18px;
+        line-height: 22px;
+        /* rotate "play" icon from > (right arrow) to down arrow */
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    } */
+
+	/*
+    .panel-heading [data-toggle="collapse"].collapsed:after {
+        /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        color: #454444;
+    } */
+</style>
+<div class="container">
+    <div class="row">
+		<div class="text-center">
+			<h3>Help</h3>
+			For a tutorial on how to use the app 
+		     
+			user manual,
+
+			how to administrate a hunt,
+
+			list of authors,
+
+			optimized for chrome (devices it works on),
+
+			useful definitions,
+
+			copyright acknowledgements (for logo),
+
+
+			
+		</div>
+	</div>
+</div>
+</body>
+

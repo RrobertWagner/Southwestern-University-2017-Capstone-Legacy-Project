@@ -1,0 +1,74 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<!-- Marketing messaging and featurettes 
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<% provide(:title, 'Home') %>
+<div class="container">
+	<div class="row>
+		<div class ="col-md-10 .col-md-offset-1 text-center">
+		<!-- ========================================== -->
+	         <div class="panel-group" id="accordion">
+					<div class="huntsHeader">
+					<h2>Hunts</h2>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+								<h4 class="panel-title">
+								<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+								Created Hunts </a>
+                                </h4>
+                            </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ol class="hunts"><%= render @created_hunts %></ol>
+                </div>
+            </div>
+        </div>
+		<!-- ===========================================--> 
+	    <!-- =========================================== -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">Joined Hunts</a>
+							</h4>
+						</div>
+						<div id="collapseTen" class="panel-collapse collapse">
+							<div class="panel-body">
+							   <%#calls pirate_hunt partial %>
+							   <ol class="hunts"><%= render @joined_hunts %></ol>
+							</div>
+						</div>
+					</div>
+		<!-- =========================================== -->
+	
+		</div>
+	</div>
+</div>	
+
+<div class="container marketing">
+  <hr class="featurette-divider">
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <%= link_to image_tag("browse-hunts.svg", :class => "img-circle"), hunts_path %>
+      <h2>Browse Hunts</h2>
+      <h3>See which hunts you wish to join.</h3>
+	  <p><%= link_to 'Join Hunts »', hunts_path, :class => 'btn btn-capstone btn-block'%> </p>
+    </div>
+    <div class="col-md-4 text-center">
+      <%= link_to image_tag("paintbrush.svg", :class => "img-circle"), new_hunt_path %>
+      <h2>Create a hunt</h2>
+      <h3>Can't find a hunt that suits you?</h3>
+      <p><%= link_to 'Make your Own »', new_hunt_path, :class => 'btn btn-capstone btn-block'%></p>
+    </div>
+    <div class="col-md-4 text-center">
+      <%= link_to image_tag("ipad.svg", :class => "img-circle"), demo_path %>
+      <h2>Try a Tutorial</h2>
+      <h3>This tutorial will show you the ropes.</h3>
+      <p><%= link_to 'Start Here »', demo_path, :class => 'btn btn-capstone btn-block'%></p>
+    </div>
+  </div><!-- /.row -->

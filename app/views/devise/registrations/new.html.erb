@@ -1,0 +1,54 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+f.label{
+color: 000; 
+}
+</style>
+</head>
+<div class="container">
+    <div class="row">
+		<div class="col-md-10 col-md-offset-1">
+            
+
+				<h2>Sign up</h2>
+
+				<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+				  <%= devise_error_messages! %>
+
+				 
+				  <div class="field">
+					  <%= f.label :display_name %><br />
+					  <%= f.text_field :display_name, autofocus: true%>
+				  </div>  
+				  
+				  <div class="field">
+					<%= f.label :email %><br />
+					<%= f.email_field :email%>
+				  </div>
+
+				  <div class="field">
+					<%= f.label :password %>
+					<% if @validatable %>
+					<em>(<%= @minimum_password_length %> characters minimum)</em>
+					<% end %><br />
+					<%= f.password_field :password, autocomplete: "off" %>
+				  </div>
+
+				  <div class="field">
+					<%= f.label :password_confirmation %><br />
+					<%= f.password_field :password_confirmation, autocomplete: "off" %>
+				  </div>
+
+				  <div class="actions">
+					<%= f.submit "Sign up", :class => 'btn btn-capstone btn-block' %>
+				  </div>
+				<% end %>
+
+				<!-- The link to the login page is unneccesary so I "removed" it
+				<%= render "devise/shared/links" %>
+				-->
+
+		</div>
+	</div>
+</div>

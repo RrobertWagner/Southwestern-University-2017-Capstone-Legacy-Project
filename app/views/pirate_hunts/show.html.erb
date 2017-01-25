@@ -1,0 +1,45 @@
+
+<head>
+<link rel="stylesheet" type="text/css" href="app\assets\stylesheets\universal.css.scss">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div class="container">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 text-center">
+			<h3><%= @pirate_hunt.hunt.title %></h3> 
+			<%= @pirate_hunt.hunt.description%><%#The description will be directly beneath the hunt title for easy readability%>						
+			<br>
+			This hunt starts at <%=@pirate_hunt.hunt.start_location%>
+			
+			<!-- time format information 
+			- %I - Hour of the day, 12-hour clock, zero-padded (01..12)
+			- %M - Minute of the hour (00..59)
+			- %p - Meridian indicator, uppercase (``AM'' or ``PM'')
+			-->
+
+			<%#This displays the start and end times of the hunt%>
+			The hunt begins on <%= @pirate_hunt.hunt.start_date.to_s(:long)%> at <%= @pirate_hunt.hunt.start_time.strftime("%I:%M %p") %> and <br> ends on 			
+			<%= @pirate_hunt.hunt.end_date.to_s(:long)%> at <%=@pirate_hunt.hunt.end_time.strftime("%I:%M %p")%>
+
+			<%if @pirate_hunt.hunt.active == true%>
+				<%unless @photo_tasks.empty?%>
+					<div class="flexslider">
+			  			<ul class="slides">
+			  			<%@photo_tasks.each do |task|%>
+			  	 			<li>
+			      			<%= image_tag task.submission.url(:medium)%>
+			    			</li>
+			  			<%end%>
+			  			</ul>
+					</div>
+				<%end%> 
+				<%= render @pirate_tasks %>
+			<%end%>			
+
+			<br>
+			<%= button_to 'Leave Hunt', pirate_hunt_path, :method => 'delete', :class => 'btn btn-capstone'%>
+            
+       </div>
+	</div>
+</div>
+

@@ -1,0 +1,312 @@
+
+/* 
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+/*Center the navigation pills by displaying as an inline block subject to the text-center class in the html*/
+
+.center-pills {
+	display: inline-block;
+	font-size: 18px;
+	color: #000; 
+}
+
+/*Box sizing mixin, necessary or box sizing gets mad*/
+@mixin box_sizing {
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+
+/*Formatting the input text boxes*/
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+
+}
+input {
+  height: auto !important;
+}
+
+/*Trying to make just the text boxes more opaque and not the text entered, 
+this needs word because the text also becomes opaque, I played with this a little but need to look into it more*/
+.opaque-forms input{
+  background-color: rgba(0,0,0,0.1);
+  color: black;  
+  border: none; 
+} 
+
+.opaque-forms{
+  color: black;
+}
+
+.footer {
+  bottom: 0;
+  font-size: 12px;
+  margin-top: 45px;
+  padding-top: 5px;
+}
+
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto -30px; /* the bottom margin is the negative value of the footer's height */
+}
+
+footer, .push {
+	height: 30px; /* '.push' must be the same height as 'footer' */
+}
+			
+h1 {
+	text-align: center; 
+	color: #000; 
+	font-size: 60px; 
+}
+
+h2 {
+	text-align: center; 
+	color: #000; 
+	font-size: 50px; 
+}
+
+h3 {
+   text-align: center ; 
+   color: #000; 
+   font-size: 28px; 
+}
+
+			
+p {
+	color: #000; 
+	text-align: center; 
+	font-size: 18px;
+	padding: 20px;
+} 
+
+ol {
+	color: #000; 
+	text-align: center; 
+	font-size: 24px;
+	padding: 20px;
+}
+
+body{
+	color: black;
+}
+
+.label{
+	color: #000;
+	font-weight: bold;
+}
+
+.public, .private, .active, .inactive{
+	text-align: center; 
+	font-size: 40px;
+	padding: 20px;
+}
+
+.public, .private{
+	color: #00F;
+}
+
+.active{
+	color: #000080;
+}
+
+.inactive{
+	color: #F00;
+}
+
+
+
+.hunts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #000;
+  }
+  .title {
+  font-size: 30px;
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  
+  .author{
+	display: block; 
+	align: center; 
+  }
+  
+  .description {
+    display: block;
+    align: center; 
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    display: block;
+    align: center; 
+  }
+}  
+  
+  
+
+/*Blue Buttons*/
+.btn-capstone {
+  color: #fff; //Text color 
+  background-color: #0052A3;
+  border-color: #0052A3;
+}
+.btn-capstone:focus,
+.btn-capstone.focus {
+  color: #fff;
+  background-color: #0052A3;
+  border-color: #0052A3;
+}
+/*Hover colors*/
+.btn-capstone:hover {
+  color: #fff;
+  background-color:#004282; 
+  border-color: #004282;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.marketing {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 30px 0; /* Space out the Bootstrap <hr> more */
+}
+.featurette {
+  padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+  overflow: hidden; /* Vertically center images part 2: clear their floats. */
+}
+.featurette-image {
+  margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+  margin-right: 40px;
+}
+.featurette-image.pull-right {
+  margin-left: 40px;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+  /* Remove the edge padding needed for mobile */
+  .marketing {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+/* HEADER
+-------------------------------------------------- */
+
+    .faqHeader {
+        font-size: 27px;
+        margin: 20px;
+    }
+
+    .huntsHeader {
+        font-size: 45px;
+        margin: 20px;
+    }
+	
+	.panel-default >.panel-heading {
+    background-color: #0052A3; 
+	color: #fff;
+	text-align: center; 
+    
+}
+/* BANNER HEADER
+--------------------------- */
+@media (min-width: 768px) {
+.bs-docs-header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 20px;
+  text-align: center;
+  width: 100%; 
+}
+}
+.bs-docs-header {
+  margin-bottom: 40px;
+  font-size: 20px;
+  color: #000000
+}
+.bs-docs-header, .bs-docs-masthead {
+  position: relative;
+  color: #000000;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  background-color: #0052A3;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#0052A3),to(#004282));
+  background-image: -webkit-linear-gradient(top,#0052A3 0,#004282 100%);
+  background-image: -o-linear-gradient(top,#0052A3 0,#004282 100%);
+  background-image: linear-gradient(to bottom,#0052A3 0,#004282 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0052A3', endColorstr='#004282', GradientType=0);
+  background-repeat: repeat-x;
+}
+.bs-docs-header h1 {
+color: #fff; 
+font-size: 30px; 
+}
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+<li id="pirate_task-<%= pirate_task.hunt_id%>">
+	<%unless pirate_task.completed%>
+  		<span class="prompt"><%=link_to pirate_task.task.prompt, pirate_task %></span>
+  <%else%>
+   		<span class="prompt"><%= pirate_task.task.prompt %> (Completed)</span>
+   <%end%>
+  
+</li>

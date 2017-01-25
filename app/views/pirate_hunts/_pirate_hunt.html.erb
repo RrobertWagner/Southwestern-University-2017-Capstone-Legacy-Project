@@ -1,0 +1,8 @@
+<li id="pirate_hunt-<%= pirate_hunt.hunt.id %>">
+  <span class="title"><%=link_to pirate_hunt.hunt.title, pirate_hunt %></span>
+  <span class="author">Created by <%=pirate_hunt.hunt.user.display_name%>.</span>
+  <span class="description"><%= pirate_hunt.hunt.description %></span>
+  <span class="timestamp">
+    Joined <%= time_ago_in_words(pirate_hunt.hunt.created_at) %> ago.
+  </span>
+</li>

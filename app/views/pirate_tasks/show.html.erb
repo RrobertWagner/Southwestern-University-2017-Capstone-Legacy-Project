@@ -1,0 +1,91 @@
+<!-- No permissions as far as active/published/public defined -->
+<!-- All alerts are located in the pirate_tasks controller -->
+
+
+<head> <!-- this allows alerts to be visible on the pirate_task/show page-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+.my-fluid-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+</style>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 text-center">
+
+
+            <%= link_to '« Back to the Hunt', pirate_hunt_path(@pirate_task.pirate_hunt_id), :class => 'btn btn-capstone btn-block'%>
+            <br>
+		
+		<%if @pirate_task.user_id == current_user.id%>
+
+		   Prompt: <%= @pirate_task.task.prompt %> <br>
+		   <%=  @pirate_task.task.points %> Points <br>
+		   <% unless @pirate_task.task.clue.blank? %>
+			Clue: <%= @pirate_task.task.clue %>
+			<%end%>
+			
+
+			<%if @pirate_task.task.task_type == 0 %>
+				<div class="alert alert-warning alert-dismissible" role="alert">
+					<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					Answers are case sensitive! 
+				</div>
+
+				<%if @pirate_task.completed == false%>
+
+					<%= form_for @pirate_task, url: {action: "update" } do |f| %>
+						
+						<%= f.text_field :qa_submission %>
+						<%= f.hidden_field :answer_uploaded, :value => true%>
+						<%= f.submit "Submit QA Answer", :class => "btn-capstone"%>
+					<% end %>
+				<%end%>
+			<% end%>
+
+			<%if @pirate_task.task.task_type == 1 %>
+				<!-- This is only a thing when there is a photo question -->
+				<%= form_for @pirate_task, html: { multipart: true} do |f| %>
+					  <div class="field">
+						<%= f.file_field :submission%>
+                        <%= f.hidden_field :answer_uploaded, :value => true%>    
+					  </div>
+					<div class="actions">
+						<%= f.hidden_field :answer_uploaded, :value => true%>   
+						<%= f.submit "Upload Submission", class: "btn btn-capstone btn-block" %>
+					  </div>
+				<% end %> <!-- ends form-->
+				
+				    <h4>Your Submission:</h4>
+
+                        <div class="photo">
+						<%= image_tag @pirate_task.submission.url(:medium) %>
+						<br>
+						</div>
+						
+					
+
+			<%end%>
+
+		<%end%>
+
+         
+            
+		</div>
+        
+	</div>
+</div>
+
+
+
+
+
+
+
+

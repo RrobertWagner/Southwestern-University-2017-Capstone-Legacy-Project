@@ -1,0 +1,11 @@
+<li id="hunt-<%= hunt.id %>">
+  <span class="title"><%=hunt.title%></span>
+  <% unless hunt.pirate_hunts.exists?(:user_id => current_user.id)%>
+<%= button_to 'Join Hunt', { :controller => 'hunts', :action => 'join', :id => hunt.id}, :method => :post, :class => 'btn btn-capstone btn-block' %>
+  <%end%>
+  <span class="author">Created by <%=hunt.user.display_name%>.</span>
+  <span class="description"><%= hunt.description %></span>
+  <span class="timestamp">
+    Created <%= time_ago_in_words(hunt.created_at) %> ago.
+  </span>
+</li>

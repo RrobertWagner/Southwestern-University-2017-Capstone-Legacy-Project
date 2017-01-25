@@ -1,0 +1,90 @@
+
+<!-- Adjusts to screen size -->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<% provide(:title, 'Create New Task') %>
+<div class="text-center">
+ <%= image_tag("pencil-paintbrush.svg", :class => "img-circle") %>
+</div>
+<h3>Create New Task</h3>
+
+<div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        Answers are case sensitive! You may want to use your clue to help participants use the right case. 
+        </div>
+
+<div class="container">
+<div class="row" style="font-size:200%">
+<div class="col-md-10 col-md-offset-1 text-center">
+  
+
+   <ul class="nav nav-tabs">
+		<li class="active"><a data-toggle="tab" href="#QA">QA</a></li>
+		<li><a data-toggle="tab" href="#photo">Photo</a></li>
+  </ul>
+
+  
+  
+
+  <div class="tab-content">
+    <div id="QA" class="tab-pane fade in active">
+		<p>
+			<%= form_for(@task, url: hunt_tasks_path) do |f| %>
+		    <div class="opaque-forms" style="font-size:50%">
+			  <%= f.hidden_field :hunt_id, :value => @huntID %>
+
+			  <%= f.label :prompt, "*Task Prompt (What will be displayed)"%>
+			  <%= f.text_field :prompt %>
+
+			  <%= f.label :clue, "Add a Clue (Optional)" %>
+			  <%= f.text_field :clue %>
+			  
+			  <%= f.label :correct_answer, "*Correct Answer (case sensitive)" %>
+			  <%= f.text_field :correct_answer %>
+
+			  <%= f.label :points, "*Point Value (0-100)" %>
+			  <%= f.number_field(:points,in: 1..100, step: 1) %>
+
+			  <%= "*=Required" %><br>
+			  <%= f.hidden_field :task_type, :value => "0"%>
+			  <!-- initialized to a static value, representative of a given hunt type. Can be changed later -->
+		  </div>  
+		  <%= f.submit "Create", class: "btn btn-capstone btn-block" %>
+		 
+		    <% end %>
+	    </p>
+    </div>
+ 
+    
+	
+	<div id="photo" class="tab-pane fade">
+        <p>
+			<%= form_for(@task, url: hunt_tasks_path) do |f| %>
+					<div class="opaque-forms" style="font-size:50%">
+					  <%= f.hidden_field :hunt_id, :value => @huntID %>
+
+					  <%= f.label :prompt, "*Task Prompt (What will be displayed)"%>
+					  <%= f.text_field :prompt %>
+
+					  <%= f.label :clue, "Add a Clue (Optional)" %>
+					  <%= f.text_field :clue %>
+
+					  <%= f.label :points, "*Point Value (0-100)" %>
+					  <%= f.number_field(:points,in: 1..100, step: 1) %>
+					  
+					  <%= "*=Required" %><br>
+					  <%= f.hidden_field :task_type, :value => "1"%>
+					  
+					  <!-- initialized to a static value, representative of a given hunt type. Can be changed later -->
+				  </div>  
+				<%= f.submit "Create", class: "btn btn-capstone btn-block" %>
+		  <% end %>
+		</p>
+    </div>
+</div>
+</div>
+</div>
+</div> 

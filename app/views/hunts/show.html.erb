@@ -1,0 +1,80 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div class="container">
+    <div class="row">
+		<div class="col-sm-10 col-md-10 col-md-offset-1 col-lg-10">
+            <div class = "text-center"> 
+			<h3><%= @hunt.title.upcase%></h3><%#The title of the hunt will be the header of the page%>
+			
+
+
+<!-- <h2><%= @hunt.description%></h2><%#The description will be directly beneath the hunt title for easy readability%>
+<br><br>
+<p>This hunt starts at <%=@hunt.start_location%></p> -->
+
+<%= @hunt.description%><%#The description will be directly beneath the hunt title for easy readability%>
+<br>
+This hunt starts at <%=@hunt.start_location%>
+<br>
+<%#This displays the start and end times of the hunt%>
+The hunt begins on <%= @hunt.start_date.to_s(:long)%> at <%=@hunt.start_time.strftime("%I:%M %p")%> and <br> ends on <%= @hunt.end_date.to_s(:long)%> at <%=@hunt.end_time.strftime("%I:%M %p")%>
+
+<br><br><br>
+
+<%#This displays whether the hunt is public or private, but we aren't currently using this %>
+<!-- <p><% if(@hunt.public?) %><div class="public">This hunt is a public hunt</div><% else %><div class="private">This hunt is a private hunt </div><%end%></p> -->
+
+
+<%#This is meant to display whether or not the hunt is active based on the active bool, apparently this is supposed to be hidden as well%>
+<!-- <p><% if(@hunt.active?) %><div class="active">This hunt is currently active</div><% else %><div class="inactive">This hunt is currently not active </div><%end%></p> -->
+
+<%#Currently the public and active displays are not staying in line with the rest of the paragraphs, but that is a stylesheet issue and will be fixed later%>
+
+<%= render @tasks %>
+
+<p></p>
+
+<br>
+<%if @hunt.user_id == current_user.id%>
+	<%= button_to 'Delete Hunt', hunt_path, :method => 'delete', :class => 'btn btn-capstone btn-block'%>
+<%end%>
+
+<br>
+
+<%# is the if statement enough to prevent the creator from creating tasks after
+	the hunt is published or should we make it more secure?%>
+<%if @hunt.user_id == current_user.id && @hunt.active == false%>
+	<%= button_to 'Create Task', new_hunt_task_path(@hunt), :method => 'get', :class => 'btn btn-capstone btn-block'%>
+<%end%>
+
+<%# We don't need this button, do we? %>
+<%#= button_to 'View Tasks', hunt_tasks_path(@hunt), :method => 'get', :class => 'btn btn-capstone btn-block'%>
+
+<%# The button for publishing a may need to be moved so that only creators of a hunt can publish %>
+<%# Also, we probably want to hide these buttons once their fields are set to true so you cannot
+	republish/reactivate a hunt over and over%>
+
+<%if @hunt.published == false && @hunt.user_id == current_user.id%>
+    <br>
+	<%= button_to 'Publish Hunt', {:controller => 'hunts', :action => 'update', :hunt => {:published => 'true'}}, :method => :put, :class => 'btn btn-capstone btn-block' %>
+<%end%>
+
+<br>
+<%# Do we need to add some sort of check that makes the creator publish the hunt before%
+	making it Active?%>
+<%if @hunt.active == false && @hunt.user_id == current_user.id && @hunt.published == true%>
+	<%= button_to 'Activate Hunt', {:controller => 'hunts', :action => 'update', :hunt => {:active => 'true'}}, :method => :put, :class => 'btn btn-capstone btn-block' %>
+<%end%>
+
+<%if @hunt.active == true %>
+
+	<h3>Images for Approval</h3>
+
+	<%= render(partial: "approval", collection: @pirate_tasks, as: "pirate_task") || "There's nothing to be displayed" %>
+<%end%>
+
+			</div>
+		<div>
+	</div>
+</div>
