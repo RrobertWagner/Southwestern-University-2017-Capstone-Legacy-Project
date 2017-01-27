@@ -1,0 +1,2 @@
+module PirateHuntsHelper
+end

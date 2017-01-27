@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: 
+   task_type: 3
+   points: 50
+   prompt: "count the number of CS posters in mood"
+   clue: "on the first floor"
+   correct_answer: "fourteen"
+   hunt_id: 14683892
+   #created_at: DateTime.new(2007,11,19,8,37,48,"-06:00")
+   #updated_at: DateTime.new(2007,11,19,8,37,48,"-06:00")
+   
+two: 
+   task_type: 3
+   points: 75
+   prompt: "count the number of pictures in the library"
+   clue: "on all floors"
+   correct_answer: "fourteen"
+   hunt_id: 14683892
+   #created_at: DateTime.new(2007,11,19,8,37,48,"-06:00")
+   #updated_at: DateTime.new(2007,11,19,8,37,48,"-06:00")

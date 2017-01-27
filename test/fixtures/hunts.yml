@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+
+one: 
+  title: hunt
+  active: true
+  published: true
+  public: true
+  #start_time: 0800
+  #end_time: 1000
+  #start_date: 04012015
+  #end_date: 04012015
+  start_location: 'cs lounge'
+  description: 'a new hunt'
+
+two: 
+  title: hunt2
+  active: false
+  published: false
+  public: false
+  #start_time: 0800
+  #end_time: 1000
+  #start_date: 04012015
+  #end_date: 04012015
+  start_location: 'cs lounge'
+  description: 'another new hunt'
+
