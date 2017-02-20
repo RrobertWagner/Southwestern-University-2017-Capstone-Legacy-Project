@@ -2,7 +2,7 @@
  The User model was created using Devise. Thus, many device modules are used. Users can join or create
  multiple Hunts and for each Hunt a Pirate Hunt is created and a Pirate Task for every Task within the
  Hunts.
- =end
+=end
 
 class User < ActiveRecord::Base
     # Include default devise modules. Others available are:
