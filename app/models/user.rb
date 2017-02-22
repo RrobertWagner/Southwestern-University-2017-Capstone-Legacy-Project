@@ -9,7 +9,25 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
+  
+ 
+ 
+#  I put in this code to heighten password complexity requirements,
+#  but it seems to be too restrictive?
+  validate :password_complexity
+  
+  def password_complexity
+    if password.present?
+      if !password.match(/^(?=\S*[a-z])(?=\S*[A-Z])(?=\S*\d)\S+/) 
+        #length requirements already work, but to combine them into this regex in the future, do:
+        #remove the plus after last \S, then write { 8,128} (need to confirm)
+        errors.add :password, "must include at least one lowercase letter, one uppercase letter, and one digit"
+      end 
+    end
+  end
+#password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d). /)
+  
+  
   has_many :hunts #this is for pirate id
   has_many :pirate_hunts, :dependent => :destroy
   has_many :pirate_tasks, :dependent => :destroy
