@@ -1,5 +1,8 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<%= google_webfonts_init({
+    google: ['Quicksand', 'Quicksand']
+  }) %>
 </head>
 
 <!-- Marketing messaging and featurettes 
@@ -53,22 +56,32 @@
   <hr class="featurette-divider">
   <!-- Three columns of text below the carousel -->
   <div class="row">
+  <div class="col-sm-12">
+  <!-- Adding in the QR Code generator -->
+  <p><%= link_to "New QR Code", new_qr_code_path, :class => 'btn btn-capstone btn-block'%></p>
+  </div>
     <div class="col-md-4 text-center">
-      <%= link_to image_tag("browse-hunts.svg", :class => "img-circle"), hunts_path %>
-      <h2>Browse Hunts</h2>
-      <h3>See which hunts you wish to join.</h3>
-	  <p><%= link_to 'Join Hunts »', hunts_path, :class => 'btn btn-capstone btn-block'%> </p>
+    <div class="home-option">
+    	<%= link_to image_tag("browse-hunts.svg", :class => "img-circle"), hunts_path %>
+    	<h2>Browse Hunts</h2>
+        <h4>See which hunts you wish to join.</h4>
+	  	<p><%= link_to 'Join Hunts »', hunts_path, :class => 'btn btn-capstone btn-block'%> </p>
+    </div>
     </div>
     <div class="col-md-4 text-center">
-      <%= link_to image_tag("paintbrush.svg", :class => "img-circle"), new_hunt_path %>
-      <h2>Create a hunt</h2>
-      <h3>Can't find a hunt that suits you?</h3>
-      <p><%= link_to 'Make your Own »', new_hunt_path, :class => 'btn btn-capstone btn-block'%></p>
+	<div class="home-option">
+        <%= link_to image_tag("paintbrush.svg", :class => "img-circle"), new_hunt_path %>
+        <h2>Create a hunt</h2>
+        <h4>Can't find a hunt that suits you?</h4>
+        <p><%= link_to 'Make your Own »', new_hunt_path, :class => 'btn btn-capstone btn-block'%></p>
+	</div>
     </div>
     <div class="col-md-4 text-center">
-      <%= link_to image_tag("ipad.svg", :class => "img-circle"), demo_path %>
-      <h2>Try a Tutorial</h2>
-      <h3>This tutorial will show you the ropes.</h3>
-      <p><%= link_to 'Start Here »', demo_path, :class => 'btn btn-capstone btn-block'%></p>
+    <div class="home-option">
+        <%= link_to image_tag("ipad.svg", :class => "img-circle"), demo_path %>
+        <h2>Try a Tutorial</h2>
+        <h4>This tutorial will show you the ropes.</h4>
+        <p><%= link_to 'Start Here »', demo_path, :class => 'btn btn-capstone btn-block'%></p>   
+    </div>
     </div>
   </div><!-- /.row -->

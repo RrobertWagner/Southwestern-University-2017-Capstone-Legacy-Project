@@ -18,7 +18,7 @@
 			<br>
 			<%= form_for(@hunt) do |f| %>
 					  
-					  <%= f.label :title, "*Title"%>
+					  <%= f.label :title, "*Title:"%>
 					  <%= f.text_field :title %>
 					  <br>
 
@@ -30,23 +30,30 @@
 						  
 						  <%= f.hidden_field :public, :value => true %>
 					  
-					  
-					  <%= f.label :start_date, "*Start Date" %>
-					  <%= f.date_field :start_date %>
+					<!-- Creating another small col for the timepickers to be placed in a more user friendly layout-->
+					<div class="col-xs-12">
+						<div class="col-xs-6">
+							<%= f.label :start_date, "*Start Date:" %><br>
+					  		<%= f.date_field :start_date %>
+						</div>
+						<div class="col-xs-6">
+							<%= f.label :end_date, "*End Date:" %><br>
+					  		<%= f.date_field :end_date %>
+						</div>
+						<div class="col-xs-6">
+							<%= f.label :start_time, "*Begins at:"%><br>
+					  		<%= f.time_field :start_time %>
+						</div>
+						<div class="col-xs-6">
+							<%= f.label :end_time, "*Ends at:"%><br>
+					  		<%= f.time_field :end_time %>
+						</div>
+					</div>
 					  <br>
-					  <%= f.label :start_time, "*Begins at"%>
-					  <%= f.time_field :start_time %>
-					  <br>
-					  <%= f.label :end_date, "*End Date" %>
-					  <%= f.date_field :end_date %>
-					  <br>
-					  <%= f.label :end_time, "*Ends at"%>
-					  <%= f.time_field :end_time %>
-					  <br>
-					  <%= f.label :start_location, "Start Location"%>
+					  <%= f.label :start_location, "Start Location:"%>
 					  <%= f.text_field :start_location%>
 					  <br>
-					  <%= f.label :description, "Description"%>
+					  <%= f.label :description, "Description:"%>
 					  <%= f.text_field :description%>
 					  <br>
 					  <%= "*=Required" %><br>
@@ -56,6 +63,8 @@
 					  <br>
 					
 					  <%= f.submit "Create Hunt", class: "btn btn-capstone btn-block" %>
+					  <br>
+					  <br>
 					 
 					<% end %>
 				</div>
