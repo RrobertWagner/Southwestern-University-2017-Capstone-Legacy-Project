@@ -37,7 +37,7 @@ The hunt begins on <%= @hunt.start_date.to_s(:long)%> at <%=@hunt.start_time.str
 
 <br>
 <%if @hunt.user_id == current_user.id%>
-	<%= button_to 'Delete Hunt', hunt_path, :method => 'delete', :class => 'btn btn-capstone btn-block'%>
+	<%= button_to 'Delete Hunt', hunt_path, :method => 'delete', :class => 'btn btn-capstone btn-red btn-block'%>
 <%end%>
 
 <br>

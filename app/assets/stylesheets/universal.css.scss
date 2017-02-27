@@ -101,6 +101,7 @@ ol {
 
 body{
 	color: black;
+	font-family: "Quicksand", sans-serif;
 }
 
 .label{
@@ -165,20 +166,64 @@ body{
 /*Blue Buttons*/
 .btn-capstone {
   color: #fff; //Text color 
-  background-color: #0052A3;
-  border-color: #0052A3;
+  // Updating the styles for new user interface
+  background-color: #5CB85C;
+  border-color: #5CB85C;
+  text-transform: uppercase;
+  padding: 15px 5px;
+  text-align: center;
+  font-size: 16px;
 }
 .btn-capstone:focus,
 .btn-capstone.focus {
   color: #fff;
-  background-color: #0052A3;
-  border-color: #0052A3;
+  // Updating the styles for new user interface
+  background-color: #5CB85C;
+  border-color: #5CB85C;
+  opacity: 0.8;
 }
 /*Hover colors*/
 .btn-capstone:hover {
   color: #fff;
-  background-color:#004282; 
-  border-color: #004282;
+  // Updating the styles for new user interface
+  background-color:#5CB85C; 
+  border-color: #5CB85C;
+  opacity: 0.8;
+}
+
+.btn-red {
+  background-color: #C9302C;
+  border-color: #C9302C;
+  color: white;
+}
+
+.btn-red:hover, .btn-red:focus {
+  background-color: #C9302C;
+  border-color: #C9302C;
+  opacity: 0.8;
+}
+
+// Updating the styles for new user interface
+
+.home-option {
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 0 9px #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+//Adding in styling to entire application HERE -- until further put into correct sub files
+
+label {
+  font-weight: bolder;
+}
+
+input {
+  padding: 10px 5px;
+  border: none;
+  box-shadow: none;
 }
 
 
@@ -255,8 +300,8 @@ body{
 -------------------------------------------------- */
 
     .faqHeader {
-        font-size: 27px;
-        margin: 20px;
+        font-size: 24px;
+        margin: 20px 0;
     }
 
     .huntsHeader {
@@ -265,9 +310,11 @@ body{
     }
 	
 	.panel-default >.panel-heading {
-    background-color: #0052A3; 
-	color: #fff;
-	text-align: center; 
+	  //Updated for the new interface design
+    background-color: #006dcc; 
+    border-color: #006dcc;
+  	color: #fff;
+  	text-align: center; 
     
 }
 /* BANNER HEADER

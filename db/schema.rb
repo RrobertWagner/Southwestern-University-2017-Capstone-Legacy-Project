@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150401154714) do
+=======
+ActiveRecord::Schema.define(version: 20170213180324) do
+>>>>>>> c569d89b38e7e6c7cb1167c7a102c15e9c9a852f
 
   create_table "hunts", force: :cascade do |t|
     t.string   "title"
@@ -80,6 +84,10 @@ ActiveRecord::Schema.define(version: 20150401154714) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+<<<<<<< HEAD
+=======
+    t.boolean  "admin",                  default: false, null: false
+>>>>>>> c569d89b38e7e6c7cb1167c7a102c15e9c9a852f
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
