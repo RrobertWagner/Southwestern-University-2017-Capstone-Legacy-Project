@@ -39,9 +39,6 @@ gem 'rqrcode'
 #adding in a different generator gem, updated
 gem 'rqrcode-with-patches', '~> 0.5.4'
 
-#Adding gem for google web fonts
-gem 'google-webfonts-rails', '~> 0.0.4'
-
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
