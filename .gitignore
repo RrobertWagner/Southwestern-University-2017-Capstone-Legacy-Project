@@ -16,6 +16,10 @@
 /log/*
 !/log/.keep
 /tmp
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 
 # Ignore vagrant instance stuff.
