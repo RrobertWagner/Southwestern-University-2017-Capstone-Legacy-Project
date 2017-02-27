@@ -1,0 +1,9 @@
+<!-- Page for the Admin to create a QR code with a certain text value -->
+
+<h1>Create a QR Code</h1> 
+
+  <%= form_for :qr_code, url: qr_codes_path do |f| %>
+    <%= f.label :text %>
+    <%= f.text_field :text %>
+    <%= f.submit %>
+  <% end %>

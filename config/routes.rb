@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'qr_codes/new'
+
+  get 'qr_codes/create'
+
   get 'demo' => 'demo#index'        #The demo/index page gets rerouted to just /demo
   get 'demo/pageOne' => 'demo#pageOne'  #must include all views in demo here like this one
 
@@ -8,6 +12,12 @@ Rails.application.routes.draw do
   # above their 'resources'
   # myHunts route kept to keep hunts#index view from erroring
   get 'pirate_hunts/myHunts' => 'pirate_hunts#myHunts' # use this syntax for adding on top of reseourceful stuff
+  
+  #Adding in the routes for the qr code controller
+  Rails.application.routes.draw do
+    resources :qr_codes, only: [:new, :create]
+    post "qr/codes/:id/new" => "qr_codes#new"
+  end
   
   resources :hunts do
     resources :tasks

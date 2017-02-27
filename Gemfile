@@ -30,6 +30,14 @@ gem 'devise', '~> 3.4.1'
 # Use paperclips for model attachments
 gem 'paperclip', '~> 4.2.1'
 
+#Adding in barby ( for qr code generating)
+gem 'barby'
+gem 'chunky_png'
+gem 'rqrcode'
+
+#adding in a different generator gem, updated
+gem 'rqrcode-with-patches', '~> 0.5.4'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

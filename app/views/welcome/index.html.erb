@@ -53,6 +53,10 @@
   <hr class="featurette-divider">
   <!-- Three columns of text below the carousel -->
   <div class="row">
+  <div class="col-sm-12">
+  <!-- Adding in the QR Code generator -->
+  <p><%= link_to "New QR Code", new_qr_code_path, :class => 'btn btn-capstone btn-block'%></p>
+  </div>
     <div class="col-md-4 text-center">
       <%= link_to image_tag("browse-hunts.svg", :class => "img-circle"), hunts_path %>
       <h2>Browse Hunts</h2>
