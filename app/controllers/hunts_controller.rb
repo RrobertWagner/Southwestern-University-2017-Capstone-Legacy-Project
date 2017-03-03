@@ -26,10 +26,17 @@ class HuntsController < ApplicationController
   end
 
   # TODO index should only pass to the View Hunts that are both public and published
+  # def index
+  #   @hunts = Hunt.where(published: true, public: true) #for 'browse all' page
+  # end
   def index
-    @hunts = Hunt.where(published: true, public: true) #for 'browse all' page
+    @hunts = Hunt.all
+    if params[:search]
+      @hunts = Hunt.search(params[:search]).order("created_at DESC")
+    else
+      @hunts = Hunt.all.order("created_at DESC")
+    end
   end
-
   # TODO possibly a routing issue
   # you should only be able to see a hunt either if you are a the creator
   # or if the hunt is public and published

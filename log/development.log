@@ -13333,3 +13333,2387 @@ Processing by DemoController#index as HTML
   Rendered demo/index.html.erb (211.2ms)
 Completed 200 OK in 216ms (Views: 214.7ms | ActiveRecord: 0.2ms)
 >>>>>>> c569d89b38e7e6c7cb1167c7a102c15e9c9a852f
+
+
+Started GET "/" for 76.78.10.38 at 2017-02-27 18:13:57 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (22.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (72.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAdminToUsers (20170213180324)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD "admin" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170213180324"]]
+  [1m[36m (14.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pirate_tasks_on_pirate_hunt_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pirate_tasks_on_pirate_hunt_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for 76.78.10.38 at 2017-02-27 18:15:02 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 24ms
+
+
+Started GET "/users/sign_in" for 76.78.10.38 at 2017-02-27 18:15:02 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (10.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (48.9ms)
+  Rendered layouts/_navbarHeader.html.erb (1.8ms)
+Completed 200 OK in 4126ms (Views: 4110.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap-0f9bec8c59791a7f6734c23521101349.css?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/assets/demo-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/assets/help-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/assets/pirate-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/assets/hunts-7112e701a904b021656c801a0b418653.css?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/assets/pirate_hunts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/assets/pirate_tasks-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/assets/qr_codes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/assets/tasks-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/assets/universal-73bbe91275ebd1398ec473335c070f3e.css?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/assets/application-f25c03c7b2297d6b14b6595a014ad47c.css?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/assets/flexslider-14bee2d50e121e9618d52b5cdd34267b.css?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/users/app/assets/stylesheets/universal.css.scss" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+ActionController::RoutingError (No route matches [GET] "/users/app/assets/stylesheets/universal.css.scss"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (78.9ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/assets/jquery.flexslider-03c7f2a20e5a48b2de07fed78980c8c0.js?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 76.78.10.38 at 2017-02-27 18:15:06 +0000
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 76.78.10.38 at 2017-02-27 18:15:07 +0000
+
+
+Started GET "/assets/demo-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.38 at 2017-02-27 18:15:07 +0000
+
+
+Started GET "/assets/help-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.38 at 2017-02-27 18:15:07 +0000
+
+
+Started GET "/assets/hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.38 at 2017-02-27 18:15:07 +0000
+
+
+Started GET "/assets/pirate-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.38 at 2017-02-27 18:15:07 +0000
+
+
+Started GET "/assets/pirate_hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.38 at 2017-02-27 18:15:07 +0000
+
+
+Started GET "/assets/qr_codes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.38 at 2017-02-27 18:15:07 +0000
+
+
+Started GET "/assets/pirate_tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.38 at 2017-02-27 18:15:07 +0000
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.38 at 2017-02-27 18:15:07 +0000
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.38 at 2017-02-27 18:15:07 +0000
+
+
+Started GET "/assets/application-4abc3c5466b65963cb31f7a96368ca1f.js?body=1" for 76.78.10.38 at 2017-02-27 18:15:07 +0000
+
+
+Started GET "/users/app/assets/stylesheets/universal.css.scss" for 76.78.10.38 at 2017-02-27 18:15:07 +0000
+
+ActionController::RoutingError (No route matches [GET] "/users/app/assets/stylesheets/universal.css.scss"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (56.2ms)
+
+
+Started POST "/users/sign_in" for 76.78.10.38 at 2017-02-27 18:15:12 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"49J8NpBOT6satMsldfqtibUuZkE5wC4dT9FNU/q1LgSS3uwP/+Hhl+05843Lb42Ucc5x550xqorE5cdkSFPveg==", "user"=>{"email"=>"camisados@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "camisados@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-02-20 23:02:48.572247"], ["current_sign_in_at", "2017-02-27 18:15:12.240020"], ["last_sign_in_ip", "74.192.162.240"], ["current_sign_in_ip", "76.78.10.38"], ["sign_in_count", 4], ["updated_at", "2017-02-27 18:15:12.242549"], ["id", 3]]
+  [1m[36m (98.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://cap2017-shannonwylie.c9users.io/
+Completed 302 Found in 208ms (ActiveRecord: 99.2ms)
+
+
+Started GET "/" for 76.78.10.38 at 2017-02-27 18:15:12 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.3ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  [1m[35mPirateHunt Load (0.2ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (15.3ms)
+  Rendered layouts/_navbarHeader.html.erb (0.6ms)
+Completed 200 OK in 237ms (Views: 214.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/browse-hunts-ae82c070cbd7fdcac005369660ffaf89.svg" for 76.78.10.38 at 2017-02-27 18:15:12 +0000
+
+
+Started GET "/assets/paintbrush-17a3e69ebac8880c9a419db02d1a2e06.svg" for 76.78.10.38 at 2017-02-27 18:15:12 +0000
+
+
+Started GET "/assets/ipad-56c7a80993173b83d7050ed0ef78076a.svg" for 76.78.10.38 at 2017-02-27 18:15:12 +0000
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 00:36:09 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 37ms
+
+
+Started GET "/users/sign_in" for 74.192.162.240 at 2017-03-01 00:36:09 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (11.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (53.0ms)
+  Rendered layouts/_navbarHeader.html.erb (1.4ms)
+Completed 200 OK in 436ms (Views: 424.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap-0f9bec8c59791a7f6734c23521101349.css?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/demo-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/hunts-7112e701a904b021656c801a0b418653.css?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/help-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/pirate-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/pirate_hunts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/qr_codes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/tasks-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/pirate_tasks-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/universal-73bbe91275ebd1398ec473335c070f3e.css?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/application-f25c03c7b2297d6b14b6595a014ad47c.css?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/flexslider-14bee2d50e121e9618d52b5cdd34267b.css?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/users/app/assets/stylesheets/universal.css.scss" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+ActionController::RoutingError (No route matches [GET] "/users/app/assets/stylesheets/universal.css.scss"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (68.3ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/jquery.flexslider-03c7f2a20e5a48b2de07fed78980c8c0.js?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/help-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/demo-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/pirate-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/pirate_hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/pirate_tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/qr_codes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/assets/application-4abc3c5466b65963cb31f7a96368ca1f.js?body=1" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+
+Started GET "/users/app/assets/stylesheets/universal.css.scss" for 74.192.162.240 at 2017-03-01 00:36:10 +0000
+
+ActionController::RoutingError (No route matches [GET] "/users/app/assets/stylesheets/universal.css.scss"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (72.1ms)
+
+
+Started POST "/users/sign_in" for 74.192.162.240 at 2017-03-01 00:36:12 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"neC+Mi91d/mMZbKGjIxW2R6hHcqglyyeOgSe3fOxXtT+qp0hUweiC4R1XDBgUlRuu/46zPA+KfJTit9n/qVsGQ==", "user"=>{"email"=>"camisados@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "camisados@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-02-27 18:15:12.240020"], ["current_sign_in_at", "2017-03-01 00:36:13.023429"], ["last_sign_in_ip", "76.78.10.38"], ["current_sign_in_ip", "74.192.162.240"], ["sign_in_count", 5], ["updated_at", "2017-03-01 00:36:13.026297"], ["id", 3]]
+  [1m[36m (13.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://cap2017-shannonwylie.c9users.io/
+Completed 302 Found in 116ms (ActiveRecord: 14.2ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 00:36:13 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.4ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  [1m[35mPirateHunt Load (0.2ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 316ms (Views: 294.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/browse-hunts-ae82c070cbd7fdcac005369660ffaf89.svg" for 74.192.162.240 at 2017-03-01 00:36:13 +0000
+
+
+Started GET "/assets/paintbrush-17a3e69ebac8880c9a419db02d1a2e06.svg" for 74.192.162.240 at 2017-03-01 00:36:13 +0000
+
+
+Started GET "/assets/ipad-56c7a80993173b83d7050ed0ef78076a.svg" for 74.192.162.240 at 2017-03-01 00:36:13 +0000
+
+
+Started GET "/hunts/new" for 74.192.162.240 at 2017-03-01 00:36:20 +0000
+Processing by HuntsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/new.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_navbarHeader.html.erb (1.1ms)
+Completed 200 OK in 249ms (Views: 235.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 00:36:24 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  [1m[35mPirateHunt Load (0.1ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_navbarHeader.html.erb (0.7ms)
+Completed 200 OK in 347ms (Views: 344.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 00:50:42 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  [1m[35mPirateHunt Load (0.2ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_navbarHeader.html.erb (1.3ms)
+Completed 200 OK in 423ms (Views: 372.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 00:51:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.3ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  [1m[35mPirateHunt Load (0.2ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_navbarHeader.html.erb (1.7ms)
+Completed 500 Internal Server Error in 403ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"hunts"} missing required keys: [:id]):
+    16: <!--- The id tag here is an anchor tag for the footer. By pressing "back to top" in the footer, the page jumps up to this tag --->
+    17: <id="top">
+    18: <%= render 'layouts/navbarHeader' %>
+    19: <%= form_tag(hunt_path, :method => "get", id: "search-form") do %>
+    20:     <%= text_field_tag :search, params[:search], placeholder: "Search Hunts" %>
+    21:     <%= submit_tag "Search", :name => nil %>
+    22: <% end %>
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__2269478400678548223_69985890429260'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (49.9ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 00:52:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  [1m[35mPirateHunt Load (0.1ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_navbarHeader.html.erb (1.7ms)
+Completed 500 Internal Server Error in 456ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"hunts"} missing required keys: [:id]):
+    16: <!--- The id tag here is an anchor tag for the footer. By pressing "back to top" in the footer, the page jumps up to this tag --->
+    17: <id="top">
+    18: <%= render 'layouts/navbarHeader' %>
+    19: <%= form_tag(hunt_path, :method => "get", title: "search-form") do %>
+    20:     <%= text_field_tag :search, params[:search], placeholder: "Search Hunts" %>
+    21:     <%= submit_tag "Search", :name => nil %>
+    22: <% end %>
+  app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___1087819227136270907_70160977217480'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (53.3ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 00:55:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  [1m[35mPirateHunt Load (0.2ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_navbarHeader.html.erb (1.5ms)
+Completed 200 OK in 500ms (Views: 370.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/hunts/new" for 74.192.162.240 at 2017-03-01 00:55:54 +0000
+Processing by HuntsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/new.html.erb within layouts/application (32.3ms)
+  Rendered layouts/_navbarHeader.html.erb (1.5ms)
+Completed 200 OK in 320ms (Views: 303.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/hunts" for 74.192.162.240 at 2017-03-01 00:56:33 +0000
+Processing by HuntsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LBqdmRYkEFykXaM97Mz1UYvazf4m/j6PoWxdVWSjWFbM7Y42DkmPeUYlBQkMYrtU0PeWSIRpBBhvRyil9aZpbg==", "hunt"=>{"title"=>"poopoo", "active"=>"false", "published"=>"false", "public"=>"true", "start_date"=>"2017-02-28", "end_date"=>"2017-02-28", "start_time"=>"20:00", "end_time"=>"21:00", "start_location"=>"here", "description"=>"hi", "user_id"=>"3", "created_at"=>"", "updated_at"=>""}, "commit"=>"Create Hunt"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "hunts" ("title", "public", "published", "active", "start_date", "start_time", "end_date", "end_time", "start_location", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "poopoo"], ["public", "t"], ["published", "f"], ["active", "f"], ["start_date", "2017-02-28"], ["start_time", "2000-01-01 20:00:00.000000"], ["end_date", "2017-02-28"], ["end_time", "2000-01-01 21:00:00.000000"], ["start_location", "here"], ["description", "hi"], ["user_id", 3], ["created_at", "2017-03-01 00:56:33.134378"], ["updated_at", "2017-03-01 00:56:33.134378"]]
+  [1m[36m (10.6ms)[0m  [1mcommit transaction[0m
+Redirected to https://cap2017-shannonwylie.c9users.io/hunts/1
+Completed 302 Found in 20ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/hunts/1" for 74.192.162.240 at 2017-03-01 00:56:33 +0000
+Processing by HuntsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.4ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."hunt_id" = ?  [["hunt_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered hunts/show.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 231ms (Views: 193.4ms | ActiveRecord: 1.4ms)
+
+
+Started PUT "/hunts/1?hunt%5Bpublished%5D=true" for 74.192.162.240 at 2017-03-01 00:56:39 +0000
+Processing by HuntsController#update as HTML
+  Parameters: {"authenticity_token"=>"z6XzZaLKLqaUPBRM/ArY+/g9CU++ulYfv+IVn9R8BkEvUuDKuqexg3ZEsngcpJb+oxBS+RwtbIhxyWBvRXk3eQ==", "hunt"=>{"published"=>"true"}, "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.1ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "hunts" SET "published" = ?, "updated_at" = ? WHERE "hunts"."id" = ?  [["published", "t"], ["updated_at", "2017-03-01 00:56:39.164617"], ["id", 1]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://cap2017-shannonwylie.c9users.io/hunts/1
+Completed 302 Found in 20ms (ActiveRecord: 13.6ms)
+
+
+Started GET "/hunts/1" for 74.192.162.240 at 2017-03-01 00:56:39 +0000
+Processing by HuntsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."hunt_id" = ?  [["hunt_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered hunts/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 194ms (Views: 189.9ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/hunts/1?hunt%5Bactive%5D=true" for 74.192.162.240 at 2017-03-01 00:56:44 +0000
+Processing by HuntsController#update as HTML
+  Parameters: {"authenticity_token"=>"qGpO0X4q+FaciZHm5D14LcXh2Oc47rVZ74bu3Xee3OdInV1+Zkdnc37xN9IEkzYonsyDUZp5j84hrZst5pvt3w==", "hunt"=>{"active"=>"true"}, "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.1ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "hunts" SET "active" = ?, "updated_at" = ? WHERE "hunts"."id" = ?  [["active", "t"], ["updated_at", "2017-03-01 00:56:44.681645"], ["id", 1]]
+  [1m[36m (157.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://cap2017-shannonwylie.c9users.io/hunts/1
+Completed 302 Found in 165ms (ActiveRecord: 158.1ms)
+
+
+Started GET "/hunts/1" for 74.192.162.240 at 2017-03-01 00:56:44 +0000
+Processing by HuntsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."hunt_id" = ?  [["hunt_id", 1]]
+  Rendered collection (0.0ms)
+  [1m[36mPirateTask Load (0.3ms)[0m  [1mSELECT "pirate_tasks".* FROM "pirate_tasks" WHERE "pirate_tasks"."hunt_id" = ? AND "pirate_tasks"."completed" = 'f' AND "pirate_tasks"."answer_uploaded" = 't'[0m  [["hunt_id", 1]]
+  Rendered hunts/_approval.html.erb (0.0ms)
+  Rendered hunts/show.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navbarHeader.html.erb (0.7ms)
+Completed 200 OK in 218ms (Views: 213.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 00:56:50 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mPirateHunt Exists (0.3ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 1], ["user_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/_hunt.html.erb (185.9ms)
+  [1m[35mPirateHunt Load (0.2ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (193.9ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 420ms (Views: 416.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/hunts" for 74.192.162.240 at 2017-03-01 00:56:53 +0000
+Processing by HuntsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT "hunts".* FROM "hunts"  ORDER BY created_at DESC
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_browse.html.erb (3.5ms)
+  Rendered hunts/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 170ms (Views: 168.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 00:56:58 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?  [["user_id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_hunt.html.erb (3.4ms)
+  [1m[36mPirateHunt Load (0.1ms)[0m  [1mSELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 359ms (Views: 355.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/hunts/new" for 74.192.162.240 at 2017-03-01 00:57:01 +0000
+Processing by HuntsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered hunts/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navbarHeader.html.erb (0.6ms)
+Completed 200 OK in 241ms (Views: 239.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/hunts" for 74.192.162.240 at 2017-03-01 00:57:25 +0000
+Processing by HuntsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nOLYXL1Pi6rmeYh0rDeiAQfozMjrXl6srCQ6mZIr61d8FcvzpSIUjwQBLkBMmewEXMWXfknJZDtiD09pAy7abw==", "hunt"=>{"title"=>"peepee", "active"=>"false", "published"=>"false", "public"=>"true", "start_date"=>"2017-02-28", "end_date"=>"2017-02-28", "start_time"=>"20:00", "end_time"=>"21:00", "start_location"=>"here", "description"=>"yeeee", "user_id"=>"3", "created_at"=>"", "updated_at"=>""}, "commit"=>"Create Hunt"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hunts" ("title", "public", "published", "active", "start_date", "start_time", "end_date", "end_time", "start_location", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "peepee"], ["public", "t"], ["published", "f"], ["active", "f"], ["start_date", "2017-02-28"], ["start_time", "2000-01-01 20:00:00.000000"], ["end_date", "2017-02-28"], ["end_time", "2000-01-01 21:00:00.000000"], ["start_location", "here"], ["description", "yeeee"], ["user_id", 3], ["created_at", "2017-03-01 00:57:25.599311"], ["updated_at", "2017-03-01 00:57:25.599311"]]
+  [1m[35m (10.6ms)[0m  commit transaction
+Redirected to https://cap2017-shannonwylie.c9users.io/hunts/2
+Completed 302 Found in 18ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/hunts/2" for 74.192.162.240 at 2017-03-01 00:57:25 +0000
+Processing by HuntsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.1ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."hunt_id" = ?[0m  [["hunt_id", 2]]
+  Rendered collection (0.0ms)
+  Rendered hunts/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 181ms (Views: 178.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=pee" for 74.192.162.240 at 2017-03-01 00:57:29 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"pee"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (2 for 1) in: title LIKE ?):
+  app/models/hunt.rb:41:in `search'
+  app/controllers/hunts_controller.rb:35:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (41.2ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 00:58:18 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.3ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 1], ["user_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 2], ["user_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/_hunt.html.erb (58.2ms)
+  [1m[35mPirateHunt Load (0.2ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (82.1ms)
+  Rendered layouts/_navbarHeader.html.erb (1.1ms)
+Completed 200 OK in 481ms (Views: 408.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/hunts" for 74.192.162.240 at 2017-03-01 00:58:23 +0000
+Processing by HuntsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.3ms)[0m  SELECT "hunts".* FROM "hunts"  ORDER BY created_at DESC
+  [1m[36mPirateHunt Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 2], ["user_id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_browse.html.erb (9.8ms)
+  Rendered hunts/index.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_navbarHeader.html.erb (1.1ms)
+Completed 200 OK in 248ms (Views: 244.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 00:58:27 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?  [["user_id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 2], ["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_hunt.html.erb (5.5ms)
+  [1m[36mPirateHunt Load (0.1ms)[0m  [1mSELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 318ms (Views: 314.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/hunts/2" for 74.192.162.240 at 2017-03-01 00:58:30 +0000
+Processing by HuntsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."hunt_id" = ?  [["hunt_id", 2]]
+  Rendered collection (0.0ms)
+  Rendered hunts/show.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navbarHeader.html.erb (0.7ms)
+Completed 200 OK in 271ms (Views: 255.2ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/hunts/2?hunt%5Bpublished%5D=true" for 74.192.162.240 at 2017-03-01 00:58:32 +0000
+Processing by HuntsController#update as HTML
+  Parameters: {"authenticity_token"=>"SfdtbBjuD0fLNRhc3tLg9cOEJzwK0z2f9wqfLnaWxv+pAH7DAIOQYilNvmg+fK7wmKl8iqhEBwg5Iere55P3xw==", "hunt"=>{"published"=>"true"}, "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "hunts" SET "published" = ?, "updated_at" = ? WHERE "hunts"."id" = ?  [["published", "t"], ["updated_at", "2017-03-01 00:58:32.264374"], ["id", 2]]
+  [1m[36m (11.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://cap2017-shannonwylie.c9users.io/hunts/2
+Completed 302 Found in 24ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/hunts/2" for 74.192.162.240 at 2017-03-01 00:58:32 +0000
+Processing by HuntsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.1ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."hunt_id" = ?  [["hunt_id", 2]]
+  Rendered collection (0.0ms)
+  Rendered hunts/show.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navbarHeader.html.erb (0.6ms)
+Completed 200 OK in 226ms (Views: 221.8ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/hunts/2?hunt%5Bactive%5D=true" for 74.192.162.240 at 2017-03-01 00:58:33 +0000
+Processing by HuntsController#update as HTML
+  Parameters: {"authenticity_token"=>"0fcDL/0X/okD6z4yd9tEb8uqCXhmWmsnKJMB7Hw+hp8xABCA5XphrOGTmAaXdQpqkIdSzsTNUbDmuHQc7Tu3pw==", "hunt"=>{"active"=>"true"}, "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.1ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "hunts" SET "active" = ?, "updated_at" = ? WHERE "hunts"."id" = ?  [["active", "t"], ["updated_at", "2017-03-01 00:58:33.973464"], ["id", 2]]
+  [1m[36m (12.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://cap2017-shannonwylie.c9users.io/hunts/2
+Completed 302 Found in 19ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/hunts/2" for 74.192.162.240 at 2017-03-01 00:58:34 +0000
+Processing by HuntsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.1ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."hunt_id" = ?  [["hunt_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[36mPirateTask Load (0.2ms)[0m  [1mSELECT "pirate_tasks".* FROM "pirate_tasks" WHERE "pirate_tasks"."hunt_id" = ? AND "pirate_tasks"."completed" = 'f' AND "pirate_tasks"."answer_uploaded" = 't'[0m  [["hunt_id", 2]]
+  Rendered hunts/_approval.html.erb (0.0ms)
+  Rendered hunts/show.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 230ms (Views: 225.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 00:58:38 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 1], ["user_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 2], ["user_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/_hunt.html.erb (6.6ms)
+  [1m[35mPirateHunt Load (0.1ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 288ms (Views: 284.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=pee" for 74.192.162.240 at 2017-03-01 00:58:42 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"pee"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.3ms)[0m  SELECT "hunts".* FROM "hunts" WHERE (title LIKE '%pee%')  ORDER BY created_at DESC
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 2], ["user_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_browse.html.erb (4.2ms)
+  Rendered hunts/index.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 218ms (Views: 215.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=poo" for 74.192.162.240 at 2017-03-01 00:58:46 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"poo"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.3ms)[0m  SELECT "hunts".* FROM "hunts" WHERE (title LIKE '%poo%')  ORDER BY created_at DESC
+  [1m[36mPirateHunt Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_browse.html.erb (3.2ms)
+  Rendered hunts/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 218ms (Views: 214.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=p" for 74.192.162.240 at 2017-03-01 00:58:49 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"p"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.3ms)[0m  SELECT "hunts".* FROM "hunts" WHERE (title LIKE '%p%')  ORDER BY created_at DESC
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 2], ["user_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_browse.html.erb (5.8ms)
+  Rendered hunts/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 211ms (Views: 208.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=e" for 74.192.162.240 at 2017-03-01 00:58:51 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"e"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.3ms)[0m  SELECT "hunts".* FROM "hunts" WHERE (title LIKE '%e%')  ORDER BY created_at DESC
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 2], ["user_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_browse.html.erb (3.1ms)
+  Rendered hunts/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 202ms (Views: 199.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=sh" for 74.192.162.240 at 2017-03-01 00:58:56 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"sh"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.3ms)[0m  SELECT "hunts".* FROM "hunts" WHERE (title LIKE '%sh%')  ORDER BY created_at DESC
+  Rendered hunts/_browse.html.erb (0.0ms)
+  Rendered hunts/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navbarHeader.html.erb (0.7ms)
+Completed 200 OK in 369ms (Views: 365.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 01:00:13 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.3ms)[0m  SELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?  [["user_id", 3]]
+  [1m[36mPirateHunt Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 2], ["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_hunt.html.erb (8.6ms)
+  [1m[36mPirateHunt Load (0.2ms)[0m  [1mSELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered collection (0.1ms)
+  Rendered welcome/index.html.erb within layouts/application (16.7ms)
+  Rendered layouts/_navbarHeader.html.erb (0.8ms)
+Completed 200 OK in 425ms (Views: 420.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 01:06:15 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.4ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 1], ["user_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 2], ["user_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/_hunt.html.erb (68.4ms)
+  [1m[35mPirateHunt Load (0.3ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (97.6ms)
+  Rendered layouts/_navbarHeader.html.erb (1.1ms)
+Completed 200 OK in 475ms (Views: 420.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=shan" for 74.192.162.240 at 2017-03-01 01:06:25 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"shan"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (1.0ms)[0m  SELECT "hunts".* FROM "hunts" WHERE (title LIKE '%shan%' OR user LIKE '%shan%')  ORDER BY created_at DESC
+SQLite3::SQLException: no such column: user: SELECT "hunts".* FROM "hunts" WHERE (title LIKE '%shan%' OR user LIKE '%shan%')  ORDER BY created_at DESC
+  Rendered hunts/index.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (SQLite3::SQLException: no such column: user: SELECT "hunts".* FROM "hunts" WHERE (title LIKE '%shan%' OR user LIKE '%shan%')  ORDER BY created_at DESC):
+    10: <div class="container"> 
+    11: 	<div class="row">
+    12: 		<div class="col-md-10 col-md-offset-1 text-center">
+    13: 			<% if @hunts.blank? %>
+    14: 				<h2>There are no hunts containing the term <%= params[:search] %>.</h2>
+    15: 			<% end %>
+    16: 			<h2>Hunt List</h2>
+  app/views/hunts/index.html.erb:13:in `_app_views_hunts_index_html_erb___1890688367662307804_53501380'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (40.6ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 01:08:26 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.4ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 1], ["user_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 2], ["user_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/_hunt.html.erb (46.8ms)
+  [1m[35mPirateHunt Load (0.2ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (75.7ms)
+  Rendered layouts/_navbarHeader.html.erb (1.5ms)
+Completed 200 OK in 527ms (Views: 414.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=shan" for 74.192.162.240 at 2017-03-01 01:08:30 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"shan"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT "hunts".* FROM "hunts" WHERE (title LIKE '%shan%' OR user_id LIKE '%shan%' OR start_location LIKE '%shan%')  ORDER BY created_at DESC
+  Rendered hunts/_browse.html.erb (0.0ms)
+  Rendered hunts/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navbarHeader.html.erb (0.6ms)
+Completed 200 OK in 253ms (Views: 250.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 01:08:35 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.3ms)[0m  SELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?  [["user_id", 3]]
+  [1m[36mPirateHunt Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 2], ["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_hunt.html.erb (8.5ms)
+  [1m[36mPirateHunt Load (0.1ms)[0m  [1mSELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (118.6ms)
+  Rendered layouts/_navbarHeader.html.erb (1.9ms)
+Completed 200 OK in 354ms (Views: 349.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/hunts" for 74.192.162.240 at 2017-03-01 01:08:38 +0000
+Processing by HuntsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.3ms)[0m  [1mSELECT "hunts".* FROM "hunts"  ORDER BY created_at DESC[0m
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 2], ["user_id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 1], ["user_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/_browse.html.erb (11.2ms)
+  Rendered hunts/index.html.erb within layouts/application (15.3ms)
+  Rendered layouts/_navbarHeader.html.erb (0.6ms)
+Completed 200 OK in 374ms (Views: 370.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/hunts/new" for 74.192.162.240 at 2017-03-01 01:08:39 +0000
+Processing by HuntsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered hunts/new.html.erb within layouts/application (29.7ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 303ms (Views: 300.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=here" for 74.192.162.240 at 2017-03-01 01:09:04 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"here"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.3ms)[0m  SELECT "hunts".* FROM "hunts" WHERE (title LIKE '%here%' OR user_id LIKE '%here%' OR start_location LIKE '%here%')  ORDER BY created_at DESC
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 2], ["user_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_browse.html.erb (5.4ms)
+  Rendered hunts/index.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 231ms (Views: 228.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 01:09:11 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?  [["user_id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 2], ["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_hunt.html.erb (4.9ms)
+  [1m[36mPirateHunt Load (0.1ms)[0m  [1mSELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered collection (0.1ms)
+  Rendered welcome/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 223ms (Views: 220.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/hunts/new" for 74.192.162.240 at 2017-03-01 01:09:13 +0000
+Processing by HuntsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered hunts/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 209ms (Views: 206.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/hunts" for 74.192.162.240 at 2017-03-01 01:09:40 +0000
+Processing by HuntsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RngAusYHnTZnhZPGvh0P53uHgxRLtCSYKLfxpfm/XYCmjxMV3moCE4X9NfJes0HiIKrYoukjHg/mnIRVaLpsuA==", "hunt"=>{"title"=>"dumb hunt", "active"=>"false", "published"=>"false", "public"=>"true", "start_date"=>"2017-02-28", "end_date"=>"2017-02-28", "start_time"=>"20:00", "end_time"=>"21:00", "start_location"=>"olin", "description"=>"", "user_id"=>"3", "created_at"=>"", "updated_at"=>""}, "commit"=>"Create Hunt"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "hunts" ("title", "public", "published", "active", "start_date", "start_time", "end_date", "end_time", "start_location", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "dumb hunt"], ["public", "t"], ["published", "f"], ["active", "f"], ["start_date", "2017-02-28"], ["start_time", "2000-01-01 20:00:00.000000"], ["end_date", "2017-02-28"], ["end_time", "2000-01-01 21:00:00.000000"], ["start_location", "olin"], ["description", ""], ["user_id", 3], ["created_at", "2017-03-01 01:09:40.042086"], ["updated_at", "2017-03-01 01:09:40.042086"]]
+  [1m[35m (11.9ms)[0m  commit transaction
+Redirected to https://cap2017-shannonwylie.c9users.io/hunts/3
+Completed 302 Found in 27ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/hunts/3" for 74.192.162.240 at 2017-03-01 01:09:40 +0000
+Processing by HuntsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.4ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.5ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."hunt_id" = ?[0m  [["hunt_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered hunts/show.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_navbarHeader.html.erb (0.9ms)
+Completed 200 OK in 353ms (Views: 325.2ms | ActiveRecord: 1.9ms)
+
+
+Started PUT "/hunts/3?hunt%5Bpublished%5D=true" for 74.192.162.240 at 2017-03-01 01:09:42 +0000
+Processing by HuntsController#update as HTML
+  Parameters: {"authenticity_token"=>"z3Su6t0wMGDIm1VZk6HRjff9kxHhiEe6hvAKHrCCFfMvg71FxV2vRSrj821zD5+IrNDIp0MffS1I23/uIYckyw==", "hunt"=>{"published"=>"true"}, "id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "hunts" SET "published" = ?, "updated_at" = ? WHERE "hunts"."id" = ?[0m  [["published", "t"], ["updated_at", "2017-03-01 01:09:42.695099"], ["id", 3]]
+  [1m[35m (13.9ms)[0m  commit transaction
+Redirected to https://cap2017-shannonwylie.c9users.io/hunts/3
+Completed 302 Found in 24ms (ActiveRecord: 14.8ms)
+
+
+Started GET "/hunts/3" for 74.192.162.240 at 2017-03-01 01:09:42 +0000
+Processing by HuntsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."hunt_id" = ?[0m  [["hunt_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered hunts/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 231ms (Views: 226.7ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/hunts/3?hunt%5Bactive%5D=true" for 74.192.162.240 at 2017-03-01 01:09:43 +0000
+Processing by HuntsController#update as HTML
+  Parameters: {"authenticity_token"=>"SdJ43mM8vK/Qkj/zGfNDlREeA4jmi+exDuKENL3ES0epJWtxe1EjijLqmcf5XQ2QSjNYPkQc3SbAyfHELMF6fw==", "hunt"=>{"active"=>"true"}, "id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "hunts" SET "active" = ?, "updated_at" = ? WHERE "hunts"."id" = ?[0m  [["active", "t"], ["updated_at", "2017-03-01 01:09:43.860089"], ["id", 3]]
+  [1m[35m (10.7ms)[0m  commit transaction
+Redirected to https://cap2017-shannonwylie.c9users.io/hunts/3
+Completed 302 Found in 18ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/hunts/3" for 74.192.162.240 at 2017-03-01 01:09:44 +0000
+Processing by HuntsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."hunt_id" = ?[0m  [["hunt_id", 3]]
+  Rendered collection (0.0ms)
+  [1m[35mPirateTask Load (0.3ms)[0m  SELECT "pirate_tasks".* FROM "pirate_tasks" WHERE "pirate_tasks"."hunt_id" = ? AND "pirate_tasks"."completed" = 'f' AND "pirate_tasks"."answer_uploaded" = 't'  [["hunt_id", 3]]
+  Rendered hunts/_approval.html.erb (0.0ms)
+  Rendered hunts/show.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_navbarHeader.html.erb (0.6ms)
+Completed 200 OK in 286ms (Views: 281.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 01:09:46 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.1ms)[0m  SELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?  [["user_id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 2], ["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 3], ["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_hunt.html.erb (6.9ms)
+  [1m[36mPirateHunt Load (0.1ms)[0m  [1mSELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 245ms (Views: 241.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=olin" for 74.192.162.240 at 2017-03-01 01:09:52 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"olin"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.3ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE (title LIKE '%olin%' OR user_id LIKE '%olin%' OR start_location LIKE '%olin%')  ORDER BY created_at DESC[0m
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 3], ["user_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/_browse.html.erb (3.1ms)
+  Rendered hunts/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 212ms (Views: 209.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 01:09:56 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 1], ["user_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 2], ["user_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 3], ["user_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/_hunt.html.erb (8.3ms)
+  [1m[35mPirateHunt Load (0.1ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 360ms (Views: 357.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=shan" for 74.192.162.240 at 2017-03-01 01:09:59 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"shan"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.3ms)[0m  SELECT "hunts".* FROM "hunts" WHERE (title LIKE '%shan%' OR user_id LIKE '%shan%' OR start_location LIKE '%shan%')  ORDER BY created_at DESC
+  Rendered hunts/_browse.html.erb (0.0ms)
+  Rendered hunts/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navbarHeader.html.erb (0.7ms)
+Completed 200 OK in 254ms (Views: 251.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 01:12:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.3ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mPirateHunt Exists (0.3ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 1], ["user_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 2], ["user_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 3], ["user_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/_hunt.html.erb (58.5ms)
+  [1m[35mPirateHunt Load (0.2ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (77.5ms)
+  Rendered layouts/_navbarHeader.html.erb (1.1ms)
+Completed 200 OK in 455ms (Views: 382.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=h" for 74.192.162.240 at 2017-03-01 01:12:23 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"h"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.3ms)[0m  SELECT "hunts".* FROM "hunts" WHERE (title LIKE '%h%' OR start_location LIKE '%h%')  ORDER BY created_at DESC
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 3], ["user_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 2], ["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_browse.html.erb (9.5ms)
+  Rendered hunts/index.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 236ms (Views: 232.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 01:12:31 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?  [["user_id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 2], ["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 3], ["user_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_hunt.html.erb (121.5ms)
+  [1m[36mPirateHunt Load (0.2ms)[0m  [1mSELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (128.9ms)
+  Rendered layouts/_navbarHeader.html.erb (1.2ms)
+Completed 200 OK in 354ms (Views: 350.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 74.192.162.240 at 2017-03-01 01:37:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.4ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mPirateHunt Exists (0.4ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 1], ["user_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 2], ["user_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 3], ["user_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/_hunt.html.erb (80.1ms)
+  [1m[35mPirateHunt Load (2.6ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (114.0ms)
+  Rendered layouts/_navbarHeader.html.erb (1.7ms)
+Completed 200 OK in 579ms (Views: 483.2ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/" for 31.13.114.69 at 2017-03-01 01:37:55 +0000
+Processing by WelcomeController#index as */*
+Completed 401 Unauthorized in 5ms
+
+
+Started GET "/users/sign_in" for 31.13.113.183 at 2017-03-01 01:37:56 +0000
+Processing by Devise::SessionsController#new as */*
+  Rendered devise/shared/_links.html.erb (8.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (46.7ms)
+  Rendered layouts/_navbarHeader.html.erb (0.8ms)
+Completed 200 OK in 264ms (Views: 259.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 173.252.95.31 at 2017-03-01 01:37:58 +0000
+Processing by WelcomeController#index as */*
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 173.252.95.24 at 2017-03-01 01:37:58 +0000
+Processing by Devise::SessionsController#new as */*
+  Rendered devise/shared/_links.html.erb (6.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.9ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 217ms (Views: 215.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/help-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 173.252.95.31 at 2017-03-01 01:37:59 +0000
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 173.252.95.30 at 2017-03-01 01:37:59 +0000
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 173.252.95.24 at 2017-03-01 01:37:59 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 173.252.95.31 at 2017-03-01 01:37:59 +0000
+
+
+Started GET "/assets/jquery.flexslider-03c7f2a20e5a48b2de07fed78980c8c0.js?body=1" for 173.252.95.31 at 2017-03-01 01:37:59 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 173.252.95.24 at 2017-03-01 01:37:59 +0000
+
+
+Started GET "/assets/pirate_hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 173.252.95.31 at 2017-03-01 01:37:59 +0000
+
+
+Started GET "/assets/hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 173.252.95.30 at 2017-03-01 01:37:59 +0000
+
+
+Started GET "/assets/application-4abc3c5466b65963cb31f7a96368ca1f.js?body=1" for 173.252.95.27 at 2017-03-01 01:37:59 +0000
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 173.252.95.27 at 2017-03-01 01:37:59 +0000
+
+
+Started GET "/assets/pirate_tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 173.252.95.30 at 2017-03-01 01:37:59 +0000
+
+
+Started GET "/assets/pirate-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 173.252.95.28 at 2017-03-01 01:37:59 +0000
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 173.252.95.28 at 2017-03-01 01:37:59 +0000
+
+
+Started GET "/assets/demo-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 173.252.95.27 at 2017-03-01 01:37:59 +0000
+
+
+Started GET "/assets/qr_codes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 173.252.95.27 at 2017-03-01 01:37:59 +0000
+
+
+Started GET "/" for 66.87.121.32 at 2017-03-01 01:38:14 +0000
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 66.87.121.32 at 2017-03-01 01:38:15 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (5.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.5ms)
+  Rendered layouts/_navbarHeader.html.erb (0.9ms)
+Completed 200 OK in 350ms (Views: 348.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-0f9bec8c59791a7f6734c23521101349.css?body=1" for 66.87.121.32 at 2017-03-01 01:38:15 +0000
+
+
+Started GET "/assets/demo-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 66.87.121.32 at 2017-03-01 01:38:15 +0000
+
+
+Started GET "/assets/help-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 66.87.121.32 at 2017-03-01 01:38:15 +0000
+
+
+Started GET "/assets/hunts-7112e701a904b021656c801a0b418653.css?body=1" for 66.87.121.32 at 2017-03-01 01:38:16 +0000
+
+
+Started GET "/assets/pirate-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 66.87.121.32 at 2017-03-01 01:38:16 +0000
+
+
+Started GET "/assets/pirate_hunts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 66.87.121.32 at 2017-03-01 01:38:16 +0000
+
+
+Started GET "/assets/pirate_tasks-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 66.87.121.32 at 2017-03-01 01:38:16 +0000
+
+
+Started GET "/assets/qr_codes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 66.87.121.32 at 2017-03-01 01:38:16 +0000
+
+
+Started GET "/assets/universal-73bbe91275ebd1398ec473335c070f3e.css?body=1" for 66.87.121.32 at 2017-03-01 01:38:16 +0000
+
+
+Started GET "/assets/tasks-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 66.87.121.32 at 2017-03-01 01:38:16 +0000
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 66.87.121.32 at 2017-03-01 01:38:16 +0000
+
+
+Started GET "/assets/application-f25c03c7b2297d6b14b6595a014ad47c.css?body=1" for 66.87.121.32 at 2017-03-01 01:38:16 +0000
+
+
+Started GET "/assets/flexslider-14bee2d50e121e9618d52b5cdd34267b.css?body=1" for 66.87.121.32 at 2017-03-01 01:38:16 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 66.87.121.32 at 2017-03-01 01:38:16 +0000
+
+
+Started GET "/users/app/assets/stylesheets/universal.css.scss" for 66.87.121.32 at 2017-03-01 01:38:16 +0000
+
+ActionController::RoutingError (No route matches [GET] "/users/app/assets/stylesheets/universal.css.scss"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (71.9ms)
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 66.87.121.32 at 2017-03-01 01:38:16 +0000
+
+
+Started GET "/assets/jquery.flexslider-03c7f2a20e5a48b2de07fed78980c8c0.js?body=1" for 66.87.121.32 at 2017-03-01 01:38:16 +0000
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 66.87.121.32 at 2017-03-01 01:38:16 +0000
+
+
+Started GET "/assets/demo-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 66.87.121.32 at 2017-03-01 01:38:16 +0000
+
+
+Started GET "/assets/help-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 66.87.121.32 at 2017-03-01 01:38:17 +0000
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 66.87.121.32 at 2017-03-01 01:38:17 +0000
+
+
+Started GET "/assets/hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 66.87.121.32 at 2017-03-01 01:38:17 +0000
+
+
+Started GET "/assets/pirate-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 66.87.121.32 at 2017-03-01 01:38:17 +0000
+
+
+Started GET "/assets/pirate_hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 66.87.121.32 at 2017-03-01 01:38:17 +0000
+
+
+Started GET "/assets/pirate_tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 66.87.121.32 at 2017-03-01 01:38:17 +0000
+
+
+Started GET "/assets/qr_codes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 66.87.121.32 at 2017-03-01 01:38:17 +0000
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 66.87.121.32 at 2017-03-01 01:38:17 +0000
+
+
+Started GET "/assets/application-4abc3c5466b65963cb31f7a96368ca1f.js?body=1" for 66.87.121.32 at 2017-03-01 01:38:17 +0000
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 66.87.121.32 at 2017-03-01 01:38:17 +0000
+
+
+Started POST "/users/sign_in" for 66.87.121.32 at 2017-03-01 01:38:49 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i/Jz3ZMpu4wGWjNcon042qap3L1uUArLgAzy1h736CATzyPB0qUPAxPzAPmVpHGzQuf6fwrcjGB6xqqHjYAVxw==", "user"=>{"email"=>"wylies@southwestern.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "wylies@southwestern.edu"]]
+Completed 401 Unauthorized in 85ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i/Jz3ZMpu4wGWjNcon042qap3L1uUArLgAzy1h736CATzyPB0qUPAxPzAPmVpHGzQuf6fwrcjGB6xqqHjYAVxw==", "user"=>{"email"=>"wylies@southwestern.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (6.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.4ms)
+  Rendered layouts/_navbarHeader.html.erb (0.6ms)
+Completed 200 OK in 395ms (Views: 311.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/app/assets/stylesheets/universal.css.scss" for 66.87.121.32 at 2017-03-01 01:38:49 +0000
+
+ActionController::RoutingError (No route matches [GET] "/users/app/assets/stylesheets/universal.css.scss"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (55.7ms)
+
+
+Started POST "/users/sign_in" for 66.87.121.32 at 2017-03-01 01:38:56 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I7++cCoWEISM5nPae/i3SrNwXS14y9qKHATDBrpaXEa7gu5sa5qkC5lPQH9MIf4jVz577xxHXCHmzptXKS2hoQ==", "user"=>{"email"=>"wylies@southwestern.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "wylies@southwestern.edu"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-02-14 03:03:30.075872"], ["current_sign_in_at", "2017-03-01 01:38:56.324237"], ["last_sign_in_ip", "74.192.162.240"], ["current_sign_in_ip", "66.87.121.32"], ["sign_in_count", 6], ["updated_at", "2017-03-01 01:38:56.326413"], ["id", 1]]
+  [1m[36m (10.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://cap2017-shannonwylie.c9users.io/
+Completed 302 Found in 187ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/" for 66.87.121.32 at 2017-03-01 01:38:56 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mHunt Load (0.1ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection (0.0ms)
+  [1m[35mPirateHunt Load (0.1ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navbarHeader.html.erb (0.7ms)
+Completed 200 OK in 262ms (Views: 258.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/browse-hunts-ae82c070cbd7fdcac005369660ffaf89.svg" for 66.87.121.32 at 2017-03-01 01:38:57 +0000
+
+
+Started GET "/assets/ipad-56c7a80993173b83d7050ed0ef78076a.svg" for 66.87.121.32 at 2017-03-01 01:38:57 +0000
+
+
+Started GET "/assets/paintbrush-17a3e69ebac8880c9a419db02d1a2e06.svg" for 66.87.121.32 at 2017-03-01 01:38:57 +0000
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=Pee" for 66.87.121.32 at 2017-03-01 01:39:06 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Pee"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mHunt Load (0.4ms)[0m  SELECT "hunts".* FROM "hunts" WHERE (title LIKE '%Pee%' OR start_location LIKE '%Pee%')  ORDER BY created_at DESC
+  [1m[36mPirateHunt Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 2], ["user_id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_browse.html.erb (6.8ms)
+  Rendered hunts/index.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 235ms (Views: 231.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 66.87.121.32 at 2017-03-01 01:39:13 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mHunt Load (0.1ms)[0m  SELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?  [["user_id", 1]]
+  Rendered collection (0.0ms)
+  [1m[36mPirateHunt Load (0.1ms)[0m  [1mSELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navbarHeader.html.erb (1.7ms)
+Completed 200 OK in 226ms (Views: 223.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/hunts" for 66.87.121.32 at 2017-03-01 01:39:17 +0000
+Processing by HuntsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mHunt Load (0.3ms)[0m  [1mSELECT "hunts".* FROM "hunts"  ORDER BY created_at DESC[0m
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 3], ["user_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 2], ["user_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 1], ["user_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/_browse.html.erb (10.8ms)
+  Rendered hunts/index.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_navbarHeader.html.erb (0.7ms)
+Completed 200 OK in 411ms (Views: 407.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 66.87.121.32 at 2017-03-01 01:39:27 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mHunt Load (0.1ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection (0.0ms)
+  [1m[35mPirateHunt Load (0.1ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 186ms (Views: 183.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 76.78.10.36 at 2017-03-01 17:53:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.3ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 1], ["user_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 2], ["user_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 3], ["user_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/_hunt.html.erb (58.8ms)
+  [1m[35mPirateHunt Load (0.3ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (83.3ms)
+  Rendered layouts/_navbarHeader.html.erb (1.9ms)
+Completed 200 OK in 592ms (Views: 522.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 76.78.10.36 at 2017-03-01 17:53:15 +0000
+
+
+Started GET "/assets/jquery.flexslider-03c7f2a20e5a48b2de07fed78980c8c0.js?body=1" for 76.78.10.36 at 2017-03-01 17:53:15 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 76.78.10.36 at 2017-03-01 17:53:15 +0000
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 76.78.10.36 at 2017-03-01 17:53:15 +0000
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 76.78.10.36 at 2017-03-01 17:53:15 +0000
+
+
+Started GET "/assets/demo-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-01 17:53:15 +0000
+
+
+Started GET "/assets/help-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-01 17:53:15 +0000
+
+
+Started GET "/assets/hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-01 17:53:15 +0000
+
+
+Started GET "/assets/pirate-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-01 17:53:15 +0000
+
+
+Started GET "/assets/pirate_hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-01 17:53:15 +0000
+
+
+Started GET "/assets/pirate_tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-01 17:53:15 +0000
+
+
+Started GET "/assets/qr_codes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-01 17:53:15 +0000
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-01 17:53:15 +0000
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-01 17:53:15 +0000
+
+
+Started GET "/assets/application-4abc3c5466b65963cb31f7a96368ca1f.js?body=1" for 76.78.10.36 at 2017-03-01 17:53:16 +0000
+
+
+Started GET "/assets/browse-hunts-ae82c070cbd7fdcac005369660ffaf89.svg" for 76.78.10.36 at 2017-03-01 17:53:16 +0000
+
+
+Started GET "/assets/paintbrush-17a3e69ebac8880c9a419db02d1a2e06.svg" for 76.78.10.36 at 2017-03-01 17:53:16 +0000
+
+
+Started GET "/assets/ipad-56c7a80993173b83d7050ed0ef78076a.svg" for 76.78.10.36 at 2017-03-01 17:53:16 +0000
+
+
+Started GET "/hunts/new" for 76.78.10.36 at 2017-03-01 17:53:27 +0000
+Processing by HuntsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/new.html.erb within layouts/application (27.8ms)
+  Rendered layouts/_navbarHeader.html.erb (1.8ms)
+Completed 200 OK in 328ms (Views: 325.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/hunts" for 76.78.10.36 at 2017-03-01 17:54:11 +0000
+Processing by HuntsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lzQuIzLFdjtkD/mB1ECCLMb152tpFajHwRbdxDzejst3wz2MKqjpHoZ3X7U07swpndi83cuCklAPPag0rdu/8w==", "hunt"=>{"title"=>"hello", "active"=>"false", "published"=>"false", "public"=>"true", "start_date"=>"2017-03-01", "end_date"=>"2017-03-01", "start_time"=>"12:00", "end_time"=>"12:15", "start_location"=>"mood bridwell", "description"=>"hi!", "user_id"=>"3", "created_at"=>"", "updated_at"=>""}, "commit"=>"Create Hunt"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "hunts" ("title", "public", "published", "active", "start_date", "start_time", "end_date", "end_time", "start_location", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "hello"], ["public", "t"], ["published", "f"], ["active", "f"], ["start_date", "2017-03-01"], ["start_time", "2000-01-01 12:00:00.000000"], ["end_date", "2017-03-01"], ["end_time", "2000-01-01 12:15:00.000000"], ["start_location", "mood bridwell"], ["description", "hi!"], ["user_id", 3], ["created_at", "2017-03-01 17:54:11.658149"], ["updated_at", "2017-03-01 17:54:11.658149"]]
+  [1m[36m (24.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://cap2017-shannonwylie.c9users.io/hunts/4
+Completed 302 Found in 45ms (ActiveRecord: 26.7ms)
+
+
+Started GET "/hunts/4" for 76.78.10.36 at 2017-03-01 17:54:11 +0000
+Processing by HuntsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (1.2ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."hunt_id" = ?  [["hunt_id", 4]]
+  Rendered collection (0.0ms)
+  Rendered hunts/show.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_navbarHeader.html.erb (1.1ms)
+Completed 200 OK in 483ms (Views: 435.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/hunts/4/tasks/new" for 76.78.10.36 at 2017-03-01 17:54:14 +0000
+Processing by TasksController#new as HTML
+  Parameters: {"hunt_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered tasks/new.html.erb within layouts/application (117.0ms)
+  Rendered layouts/_navbarHeader.html.erb (0.7ms)
+Completed 200 OK in 423ms (Views: 406.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/pencil-paintbrush-3dc4a137816996bc63d804ec67d2ccf3.svg" for 76.78.10.36 at 2017-03-01 17:54:15 +0000
+
+
+Started POST "/hunts/4/tasks" for 76.78.10.36 at 2017-03-01 17:54:41 +0000
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DKBSktLos8HlUpdqEWXrXnxM9oNGHwX3pNLP4AyKZIPsV0E9yoUs5AcqMV7xy6VbJ2GtNeSIP2Bq+boQnY9Vuw==", "task"=>{"hunt_id"=>"4", "prompt"=>"This is my task", "clue"=>"how many people are in our capstone?", "correct_answer"=>"11", "points"=>"50", "task_type"=>"0"}, "commit"=>"Create", "hunt_id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("points", "clue", "task_type", "correct_answer", "prompt", "hunt_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["points", 50], ["clue", "how many people are in our capstone?"], ["task_type", 0], ["correct_answer", "11"], ["prompt", "This is my task"], ["hunt_id", 4], ["created_at", "2017-03-01 17:54:41.273118"], ["updated_at", "2017-03-01 17:54:41.273118"]]
+  [1m[36m (12.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mHunt Load (0.2ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPirateHunt Load (0.2ms)[0m  [1mSELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = 4[0m
+Redirected to https://cap2017-shannonwylie.c9users.io/hunts/4
+Completed 302 Found in 24ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/hunts/4" for 76.78.10.36 at 2017-03-01 17:54:41 +0000
+Processing by HuntsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."hunt_id" = ?  [["hunt_id", 4]]
+  Rendered tasks/_task.html.erb (1.1ms)
+  Rendered hunts/show.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 270ms (Views: 264.5ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/hunts/4?hunt%5Bpublished%5D=true" for 76.78.10.36 at 2017-03-01 17:54:44 +0000
+Processing by HuntsController#update as HTML
+  Parameters: {"authenticity_token"=>"bT87BKdesWVOknEiP1xdI/hquNfJB/bGsKpk8nhCXLmNyCirvzMuQKzq1xbf8hMmo0fjYWuQzFF+gREC6UdtgQ==", "hunt"=>{"published"=>"true"}, "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "hunts" SET "published" = ?, "updated_at" = ? WHERE "hunts"."id" = ?  [["published", "t"], ["updated_at", "2017-03-01 17:54:44.756342"], ["id", 4]]
+  [1m[36m (15.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://cap2017-shannonwylie.c9users.io/hunts/4
+Completed 302 Found in 31ms (ActiveRecord: 16.8ms)
+
+
+Started GET "/hunts/4" for 76.78.10.36 at 2017-03-01 17:54:44 +0000
+Processing by HuntsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.5ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."hunt_id" = ?  [["hunt_id", 4]]
+  Rendered tasks/_task.html.erb (0.2ms)
+  Rendered hunts/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 263ms (Views: 258.0ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/hunts/4?hunt%5Bactive%5D=true" for 76.78.10.36 at 2017-03-01 17:54:47 +0000
+Processing by HuntsController#update as HTML
+  Parameters: {"authenticity_token"=>"JTJaNF/l/xuNRBz7YLKSqkOS9/IsJV1WZZrX6LY96e7FxUmbR4hgPm88us+AHNyvGL+sRI6yZ8GrsaIYJzjY1g==", "hunt"=>{"active"=>"true"}, "id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (160.6ms)[0m  UPDATE "hunts" SET "active" = ?, "updated_at" = ? WHERE "hunts"."id" = ?  [["active", "t"], ["updated_at", "2017-03-01 17:54:47.670230"], ["id", 4]]
+  [1m[36m (26.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://cap2017-shannonwylie.c9users.io/hunts/4
+Completed 302 Found in 199ms (ActiveRecord: 188.4ms)
+
+
+Started GET "/hunts/4" for 76.78.10.36 at 2017-03-01 17:54:48 +0000
+Processing by HuntsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."hunt_id" = ?  [["hunt_id", 4]]
+  Rendered tasks/_task.html.erb (0.2ms)
+  [1m[36mPirateTask Load (0.4ms)[0m  [1mSELECT "pirate_tasks".* FROM "pirate_tasks" WHERE "pirate_tasks"."hunt_id" = ? AND "pirate_tasks"."completed" = 'f' AND "pirate_tasks"."answer_uploaded" = 't'[0m  [["hunt_id", 4]]
+  Rendered hunts/_approval.html.erb (0.0ms)
+  Rendered hunts/show.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_navbarHeader.html.erb (0.7ms)
+Completed 200 OK in 254ms (Views: 248.8ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/sign_out" for 76.78.10.36 at 2017-03-01 17:54:52 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UMV6wmg//QKR++rMtD28pw+fBgJ6DsDPtqlFdatMylqwMmltcFJiJ3ODTPhUk/KiVLJdtNiZ+lh4gjCFOkn7Yg=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to https://cap2017-shannonwylie.c9users.io/
+Completed 302 Found in 133ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 76.78.10.36 at 2017-03-01 17:54:53 +0000
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 8ms
+
+
+Started GET "/users/sign_in" for 76.78.10.36 at 2017-03-01 17:54:53 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (18.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (55.2ms)
+  Rendered layouts/_navbarHeader.html.erb (0.8ms)
+Completed 200 OK in 336ms (Views: 334.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/app/assets/stylesheets/universal.css.scss" for 76.78.10.36 at 2017-03-01 17:54:53 +0000
+
+ActionController::RoutingError (No route matches [GET] "/users/app/assets/stylesheets/universal.css.scss"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (95.8ms)
+
+
+Started POST "/users/sign_in" for 76.78.10.36 at 2017-03-01 17:54:59 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rpF+vJG0EY6glhbgiLNzaBAuOA945aALEC9A6Ds1k3NKa4m+I5byG9In+fpG+jVDvIOfTzsSvP1kswbuoJK32A==", "user"=>{"email"=>"accio.shannon@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "accio.shannon@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-03-01 17:54:59.459072"], ["current_sign_in_ip", "76.78.10.36"], ["sign_in_count", 2], ["updated_at", "2017-03-01 17:54:59.461162"], ["id", 2]]
+  [1m[35m (16.1ms)[0m  commit transaction
+Redirected to https://cap2017-shannonwylie.c9users.io/
+Completed 302 Found in 115ms (ActiveRecord: 17.0ms)
+
+
+Started GET "/" for 76.78.10.36 at 2017-03-01 17:54:59 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?  [["user_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[36mPirateHunt Load (0.1ms)[0m  [1mSELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered collection (0.0ms)
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navbarHeader.html.erb (0.8ms)
+Completed 200 OK in 283ms (Views: 279.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=hello" for 76.78.10.36 at 2017-03-01 17:55:08 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"hello"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mHunt Load (0.4ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE (title LIKE '%hello%' OR start_location LIKE '%hello%')  ORDER BY created_at DESC[0m
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 4], ["user_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/_browse.html.erb (11.3ms)
+  Rendered hunts/index.html.erb within layouts/application (23.2ms)
+  Rendered layouts/_navbarHeader.html.erb (0.7ms)
+Completed 200 OK in 288ms (Views: 281.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=shan" for 76.78.10.36 at 2017-03-01 17:55:13 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"shan"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE (title LIKE '%shan%' OR start_location LIKE '%shan%')  ORDER BY created_at DESC[0m
+  Rendered hunts/_browse.html.erb (0.0ms)
+  Rendered hunts/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 290ms (Views: 287.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=hello" for 76.78.10.36 at 2017-03-01 17:55:18 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"hello"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mHunt Load (0.4ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE (title LIKE '%hello%' OR start_location LIKE '%hello%')  ORDER BY created_at DESC[0m
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 4], ["user_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/_browse.html.erb (3.3ms)
+  Rendered hunts/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_navbarHeader.html.erb (0.7ms)
+Completed 200 OK in 314ms (Views: 311.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/hunts/4/join" for 76.78.10.36 at 2017-03-01 17:55:20 +0000
+Processing by HuntsController#join as HTML
+  Parameters: {"authenticity_token"=>"x6Vcv2oQ68kJaEe+DUpK6hlCEeQMMPhkMNSNawQwCrl6chaJOWAdPxYnEpR92ufAaVGpkXAR2aAdB8Qi5j7AHg==", "id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mHunt Load (0.1ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPirateHunt Load (0.3ms)[0m  SELECT  "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ? AND "pirate_hunts"."hunt_id" = ? LIMIT 1  [["user_id", 2], ["hunt_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "pirate_hunts" ("hunt_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["hunt_id", 4], ["user_id", 2], ["created_at", "2017-03-01 17:55:20.456478"], ["updated_at", "2017-03-01 17:55:20.456478"]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."hunt_id" = ?  [["hunt_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "pirate_tasks" ("task_id", "hunt_id", "user_id", "pirate_hunt_id", "answer_uploaded", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["task_id", 1], ["hunt_id", 4], ["user_id", 2], ["pirate_hunt_id", 1], ["answer_uploaded", "f"], ["completed", "f"], ["created_at", "2017-03-01 17:55:20.651376"], ["updated_at", "2017-03-01 17:55:20.651376"]]
+  [1m[36m (14.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://cap2017-shannonwylie.c9users.io/pirate_hunts/1
+Completed 302 Found in 228ms (ActiveRecord: 31.2ms)
+
+
+Started GET "/pirate_hunts/1" for 76.78.10.36 at 2017-03-01 17:55:20 +0000
+Processing by PirateHuntsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPirateHunt Load (0.2ms)[0m  [1mSELECT  "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."task_type" = ? AND "tasks"."hunt_id" = 4[0m  [["task_type", 1]]
+  [1m[35mPirateTask Load (0.3ms)[0m  SELECT "pirate_tasks".* FROM "pirate_tasks" WHERE "pirate_tasks"."pirate_hunt_id" = ?  [["pirate_hunt_id", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pirate_tasks/_pirate_task.html.erb (5.1ms)
+  Rendered pirate_hunts/show.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_navbarHeader.html.erb (0.6ms)
+Completed 200 OK in 277ms (Views: 267.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/pirate_hunts/app/assets/stylesheets/universal.css.scss" for 76.78.10.36 at 2017-03-01 17:55:21 +0000
+
+ActionController::RoutingError (No route matches [GET] "/pirate_hunts/app/assets/stylesheets/universal.css.scss"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (58.0ms)
+
+
+Started GET "/pirate_tasks/1" for 76.78.10.36 at 2017-03-01 17:55:24 +0000
+Processing by PirateTasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPirateTask Load (0.4ms)[0m  [1mSELECT  "pirate_tasks".* FROM "pirate_tasks" WHERE "pirate_tasks"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pirate_tasks/show.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navbarHeader.html.erb (0.7ms)
+Completed 200 OK in 353ms (Views: 347.8ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/pirate_tasks/1" for 76.78.10.36 at 2017-03-01 17:55:29 +0000
+Processing by PirateTasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g1GoXKuoL5rdSeAhZlpIofIt4UNS4HcrLvvYt77evwA+huJq+NjZbMIGtQsWyuWLgj5ZNi7BVu8DKJH+XNB1pw==", "pirate_task"=>{"qa_submission"=>"11", "answer_uploaded"=>"true"}, "commit"=>"Submit QA Answer", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPirateTask Load (0.1ms)[0m  SELECT  "pirate_tasks".* FROM "pirate_tasks" WHERE "pirate_tasks"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "pirate_tasks" SET "answer_uploaded" = ?, "qa_submission" = ?, "updated_at" = ? WHERE "pirate_tasks"."id" = ?  [["answer_uploaded", "t"], ["qa_submission", "11"], ["updated_at", "2017-03-01 17:55:29.068416"], ["id", 1]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (144.0ms)[0m  UPDATE "pirate_tasks" SET "completed" = ?, "updated_at" = ? WHERE "pirate_tasks"."id" = ?  [["completed", "t"], ["updated_at", "2017-03-01 17:55:29.087202"], ["id", 1]]
+  [1m[36m (14.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://cap2017-shannonwylie.c9users.io/pirate_tasks/1
+Completed 302 Found in 186ms (ActiveRecord: 172.4ms)
+
+
+Started GET "/pirate_tasks/1" for 76.78.10.36 at 2017-03-01 17:55:29 +0000
+Processing by PirateTasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mPirateTask Load (0.1ms)[0m  [1mSELECT  "pirate_tasks".* FROM "pirate_tasks" WHERE "pirate_tasks"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pirate_tasks/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 241ms (Views: 237.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pirate_hunts/1" for 76.78.10.36 at 2017-03-01 17:55:36 +0000
+Processing by PirateHuntsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mPirateHunt Load (0.1ms)[0m  SELECT  "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mHunt Load (0.1ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."task_type" = ? AND "tasks"."hunt_id" = 4  [["task_type", 1]]
+  [1m[36mPirateTask Load (0.1ms)[0m  [1mSELECT "pirate_tasks".* FROM "pirate_tasks" WHERE "pirate_tasks"."pirate_hunt_id" = ?[0m  [["pirate_hunt_id", 1]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pirate_tasks/_pirate_task.html.erb (2.0ms)
+  Rendered pirate_hunts/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 264ms (Views: 258.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pirate_hunts/app/assets/stylesheets/universal.css.scss" for 76.78.10.36 at 2017-03-01 17:55:36 +0000
+
+ActionController::RoutingError (No route matches [GET] "/pirate_hunts/app/assets/stylesheets/universal.css.scss"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (8.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (59.5ms)
+
+
+Started GET "/" for 76.78.10.36 at 2017-03-01 17:55:42 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?  [["user_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[36mPirateHunt Load (0.2ms)[0m  [1mSELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mHunt Load (0.4ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered pirate_hunts/_pirate_hunt.html.erb (5.6ms)
+  Rendered welcome/index.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 257ms (Views: 252.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/hunts" for 76.78.10.36 at 2017-03-01 17:55:47 +0000
+Processing by HuntsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mHunt Load (0.3ms)[0m  [1mSELECT "hunts".* FROM "hunts"  ORDER BY created_at DESC[0m
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 4], ["user_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 3], ["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 2], ["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 1], ["user_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hunts/_browse.html.erb (13.5ms)
+  Rendered hunts/index.html.erb within layouts/application (17.5ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 415ms (Views: 412.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 76.78.10.36 at 2017-03-03 04:45:10 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mHunt Load (0.3ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[35mPirateHunt Load (0.2ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 2]]
+  [1m[36mHunt Load (0.3ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered pirate_hunts/_pirate_hunt.html.erb (46.1ms)
+  Rendered welcome/index.html.erb within layouts/application (67.9ms)
+  Rendered layouts/_navbarHeader.html.erb (1.5ms)
+Completed 200 OK in 516ms (Views: 451.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 76.78.10.36 at 2017-03-03 04:45:11 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 76.78.10.36 at 2017-03-03 04:45:11 +0000
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 76.78.10.36 at 2017-03-03 04:45:11 +0000
+
+
+Started GET "/assets/jquery.flexslider-03c7f2a20e5a48b2de07fed78980c8c0.js?body=1" for 76.78.10.36 at 2017-03-03 04:45:11 +0000
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 76.78.10.36 at 2017-03-03 04:45:11 +0000
+
+
+Started GET "/assets/demo-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 04:45:11 +0000
+
+
+Started GET "/assets/help-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 04:45:11 +0000
+
+
+Started GET "/assets/hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 04:45:11 +0000
+
+
+Started GET "/assets/pirate-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 04:45:11 +0000
+
+
+Started GET "/assets/pirate_hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 04:45:11 +0000
+
+
+Started GET "/assets/pirate_tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 04:45:11 +0000
+
+
+Started GET "/assets/qr_codes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 04:45:11 +0000
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 04:45:11 +0000
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 04:45:11 +0000
+
+
+Started GET "/assets/application-4abc3c5466b65963cb31f7a96368ca1f.js?body=1" for 76.78.10.36 at 2017-03-03 04:45:12 +0000
+
+
+Started GET "/assets/browse-hunts-ae82c070cbd7fdcac005369660ffaf89.svg" for 76.78.10.36 at 2017-03-03 04:45:12 +0000
+
+
+Started GET "/assets/paintbrush-17a3e69ebac8880c9a419db02d1a2e06.svg" for 76.78.10.36 at 2017-03-03 04:45:12 +0000
+
+
+Started GET "/assets/ipad-56c7a80993173b83d7050ed0ef78076a.svg" for 76.78.10.36 at 2017-03-03 04:45:12 +0000
+
+
+Started GET "/hunts" for 76.78.10.36 at 2017-03-03 04:45:24 +0000
+Processing by HuntsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mHunt Load (0.4ms)[0m  SELECT "hunts".* FROM "hunts"  ORDER BY created_at DESC
+  [1m[36mPirateHunt Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 4], ["user_id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 3], ["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 2], ["user_id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_browse.html.erb (28.0ms)
+  Rendered hunts/index.html.erb within layouts/application (32.1ms)
+  Rendered layouts/_navbarHeader.html.erb (1.2ms)
+Completed 200 OK in 356ms (Views: 352.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 76.78.10.36 at 2017-03-03 04:45:30 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mHunt Load (0.1ms)[0m  SELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?  [["user_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[36mPirateHunt Load (0.1ms)[0m  [1mSELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mHunt Load (0.1ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered pirate_hunts/_pirate_hunt.html.erb (2.7ms)
+  Rendered welcome/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_navbarHeader.html.erb (0.4ms)
+Completed 200 OK in 290ms (Views: 286.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 76.78.10.36 at 2017-03-03 17:25:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mHunt Load (0.4ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[35mPirateHunt Load (0.3ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 2]]
+  [1m[36mHunt Load (0.3ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered pirate_hunts/_pirate_hunt.html.erb (74.8ms)
+  Rendered welcome/index.html.erb within layouts/application (112.6ms)
+  Rendered layouts/_navbarHeader.html.erb (1.8ms)
+Completed 200 OK in 1003ms (Views: 892.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/demo-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 17:25:24 +0000
+
+
+Started GET "/assets/help-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 17:25:24 +0000
+
+
+Started GET "/assets/pirate_hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 17:25:24 +0000
+
+
+Started GET "/assets/pirate-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 17:25:24 +0000
+
+
+Started GET "/assets/pirate_tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 17:25:24 +0000
+
+
+Started GET "/assets/hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 17:25:24 +0000
+
+
+Started GET "/assets/qr_codes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 17:25:24 +0000
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 17:25:24 +0000
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 76.78.10.36 at 2017-03-03 17:25:24 +0000
+
+
+Started GET "/assets/application-4abc3c5466b65963cb31f7a96368ca1f.js?body=1" for 76.78.10.36 at 2017-03-03 17:25:24 +0000
+
+
+Started GET "/assets/browse-hunts-ae82c070cbd7fdcac005369660ffaf89.svg" for 76.78.10.36 at 2017-03-03 17:25:25 +0000
+
+
+Started GET "/assets/ipad-56c7a80993173b83d7050ed0ef78076a.svg" for 76.78.10.36 at 2017-03-03 17:25:25 +0000
+
+
+Started GET "/assets/paintbrush-17a3e69ebac8880c9a419db02d1a2e06.svg" for 76.78.10.36 at 2017-03-03 17:25:25 +0000
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=olin" for 76.78.10.36 at 2017-03-03 17:25:36 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"olin"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mHunt Load (0.4ms)[0m  SELECT "hunts".* FROM "hunts" WHERE (title LIKE '%olin%' OR start_location LIKE '%olin%')  ORDER BY created_at DESC
+  [1m[36mPirateHunt Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 3], ["user_id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_browse.html.erb (37.5ms)
+  Rendered hunts/index.html.erb within layouts/application (42.3ms)
+  Rendered layouts/_navbarHeader.html.erb (0.5ms)
+Completed 200 OK in 332ms (Views: 321.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=poo" for 76.78.10.36 at 2017-03-03 17:25:45 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"poo"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mHunt Load (0.4ms)[0m  SELECT "hunts".* FROM "hunts" WHERE (title LIKE '%poo%' OR start_location LIKE '%poo%')  ORDER BY created_at DESC
+  [1m[36mPirateHunt Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_browse.html.erb (4.5ms)
+  Rendered hunts/index.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_navbarHeader.html.erb (0.6ms)
+Completed 200 OK in 538ms (Views: 535.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/hunts?utf8=%E2%9C%93&search=p" for 76.78.10.36 at 2017-03-03 17:25:52 +0000
+Processing by HuntsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"p"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mHunt Load (0.3ms)[0m  SELECT "hunts".* FROM "hunts" WHERE (title LIKE '%p%' OR start_location LIKE '%p%')  ORDER BY created_at DESC
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 2], ["user_id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPirateHunt Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered hunts/_browse.html.erb (9.2ms)
+  Rendered hunts/index.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_navbarHeader.html.erb (0.7ms)
+Completed 200 OK in 231ms (Views: 228.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 76.78.10.36 at 2017-03-03 17:26:19 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?  [["user_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[36mPirateHunt Load (0.1ms)[0m  [1mSELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered pirate_hunts/_pirate_hunt.html.erb (4.0ms)
+  Rendered welcome/index.html.erb within layouts/application (128.2ms)
+  Rendered layouts/_navbarHeader.html.erb (1.6ms)
+Completed 200 OK in 402ms (Views: 398.2ms | ActiveRecord: 0.9ms)

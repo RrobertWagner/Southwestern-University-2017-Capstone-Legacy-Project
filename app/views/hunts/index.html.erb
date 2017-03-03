@@ -10,6 +10,9 @@
 <div class="container"> 
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1 text-center">
+			<% if @hunts.blank? %>
+				<h2>There are no hunts containing the term <%= params[:search] %>.</h2>
+			<% end %>
 			<h2>Hunt List</h2>
 			<ol class="hunts"><%= render partial: "browse", collection: @hunts, as: 'hunt' %></ol>
 			<br>

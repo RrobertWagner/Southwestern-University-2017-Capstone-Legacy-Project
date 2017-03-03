@@ -36,5 +36,9 @@ class Hunt < ActiveRecord::Base #Singular because it is a class
       return phunt, :error
     end
   end
+  
+  def self.search(search)
+    where("title LIKE ? OR start_location LIKE ?", "%#{search}%", "%#{search}%")
+  end
 
 end
