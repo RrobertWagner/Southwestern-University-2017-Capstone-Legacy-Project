@@ -34,7 +34,25 @@
 					</div>
 				<%end%> 
 				<%= render @pirate_tasks %>
-			<%end%>			
+			<%end%>	
+	<br>	
+			
+	<h3>Your Current Points:  <%= @pirate_hunt.points =%> </h3> 
+			<b>Leaderboard</b>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
+        Username : Points
+        </div>
+    </div>
+    <% @pirate_hunt.hunt.pirate_hunts.joins(:user).order("points DESC").each do |s| %>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+                <%= s.user.display_name =%> : <%= s.points =%>
+            </div>
+        </div>
+    <% end %>
+<br>
+
 
 			<br>
 			<%= button_to 'Leave Hunt', pirate_hunt_path, :method => 'delete', :class => 'btn btn-capstone'%>

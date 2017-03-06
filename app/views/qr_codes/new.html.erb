@@ -1,9 +1,18 @@
 <!-- Page for the Admin to create a QR code with a certain text value -->
 
-<h1>Create a QR Code</h1> 
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>Create a QR Code</h3> 
+      <br>
+      <div class="col-sm-8 col-sm-offset-2">
+       <%= form_for :qr_code, url: qr_codes_path do |f| %>
+        <%= f.label :text, 'Add the value for the QR Code here' %>
+        <%= f.text_field :text %>
+        <%= f.submit :class => 'btn-capstone' %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <%= form_for :qr_code, url: qr_codes_path do |f| %>
-    <%= f.label :text %>
-    <%= f.text_field :text %>
-    <%= f.submit %>
-  <% end %>

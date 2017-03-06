@@ -27,11 +27,15 @@ class PirateTasksController < ApplicationController
   end
     
   def update
-    @pirate_task = PirateTask.find(params[:id])
+    @pirate_task = PirateTask.find(params[:id]) #gathers info for user performing task from db
+    @pirate_hunt = PirateHunt.find(@pirate_task.pirate_hunt_id) #gathers info for user about current hunt
     if @pirate_task.completed == false
       @pirate_task.update_attributes(pirate_task_params)
       @pirate_task, status = @pirate_task.check_answer
       if status == :correct
+        @pirate_hunt.update_attributes(:points => @pirate_hunt.points + @pirate_task.task.points) #had to use update attributes and then
+                                                                                                  #funnel in the parameter to update.  Needed above gathers
+                                                                                                  # to be able to use and update the db information
         redirect_to({:action => 'show', :id => @pirate_task.id},notice: "Submission correct! Task completed")
       elsif status == :incorrect
         redirect_to({:action => 'show', :id => @pirate_task.id}, alert:"Answer incorrect, try again")
@@ -72,7 +76,7 @@ class PirateTasksController < ApplicationController
 
   private
   def pirate_task_params
-    params.require(:pirate_task).permit(:pirate_hunt_id, :submission, :answer_uploaded, :completed, :user_id, :task_id, :hunt_id, :created_at, :updated_at, :qa_submission)
+    params.require(:pirate_task).permit(:pirate_hunt_id, :submission, :answer_uploaded, :completed, :user_id, :task_id, :hunt_id, :created_at, :updated_at, :qa_submission, :points)
     
       #pirate, hunt, pirate_hunt, and task are id fields (references)
   end
