@@ -8,4 +8,9 @@ class PirateHunt < ActiveRecord::Base #Singular because it is a class
 	belongs_to :user #, index:true #this makes it a field in the table
 	belongs_to :hunt #, index:true #http://stackoverflow.com/questions/3401504/can-model-belong-to-two-other-models-and-have-a-nested-relationship
 	has_many :pirate_tasks, :dependent => :destroy
-  end
+	
+	after_initialize :set_points #this sets the points column to 0 after a person joins a hunt
+    def set_points
+        self.points ||= 0.0
+    end    
+end
