@@ -1,19 +1,27 @@
 <!-- Page for the created QR code to be presented on-->
-<h1>QR Code Created</h1>
-  
-  <table class="qr-code">
-    <% @qr.modules.each_index do |x| %>
-      <tr>
-      <% @qr.modules.each_index do |y| %>
-       <% if @qr.dark?(x,y) %>
-        <td class="black"/>
-       <% else %>
-        <td class="white"/>
-       <% end %>
-      <% end %>
-      </tr>
-    <% end %>
-    </table>
-    <br />
-    <br />
-    <%= link_to "New QR Code", new_qr_code_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>QR Code Created</h3> 
+      <br>
+      <div class="col-sm-8 col-sm-offset-2">
+          <table class="qr-code">
+            <% @qr.modules.each_index do |x| %>
+              <tr>
+              <% @qr.modules.each_index do |y| %>
+               <% if @qr.dark?(x,y) %>
+                <td class="black"/>
+               <% else %>
+                <td class="white"/>
+               <% end %>
+              <% end %>
+              </tr>
+            <% end %>
+            </table>
+            <br />
+            <br />
+            <%= link_to "New QR Code", new_qr_code_path %>
+      </div>
+    </div>
+  </div>
+</div>
