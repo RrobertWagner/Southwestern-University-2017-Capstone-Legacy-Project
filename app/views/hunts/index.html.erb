@@ -6,12 +6,16 @@
   }) %>
 </head>
 <body>
-
+<%= form_tag(hunts_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search by hunt title or location" %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
 <div class="container"> 
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1 text-center">
 			<% if @hunts.blank? %>
-				<h2>There are no hunts containing the term <%= params[:search] %>.</h2>
+				<!--<h2>There are no hunts containing the term <%= params[:search] %>.</h2>-->
+					<h2>No hunts found.</h2>
 			<% end %>
 			<h2>Hunt List</h2>
 			<ol class="hunts"><%= render partial: "browse", collection: @hunts, as: 'hunt' %></ol>
