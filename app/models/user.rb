@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
   has_many :pirate_hunts, :dependent => :destroy
   has_many :pirate_tasks, :dependent => :destroy
   #attr_accessible :display_name
-  #accepts_nested_attributes_for :user, allow_destroy: true 
+  #accepts_nested_attributes_for :user, allow_destroy: true
     # Include default devise modules. Others available are:
     # :confirmable, :lockable, :timeoutable and :omniauthable
     devise :database_authenticatable, :registerable,
