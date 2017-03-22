@@ -55,7 +55,6 @@
                 <%= submit_tag "Search", :name => nil, :class => 'btn-capstone' %>
             <% end %>
         </div>
-        <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
 	</div>
 </div>	
 
@@ -64,10 +63,14 @@
   <!-- Three columns of text below the carousel -->
   <div class="row">
   <div class="col-sm-12">
-  <!-- Adding in the QR Code generator -->
-  <p><%= link_to "New QR Code", new_qr_code_path, :class => 'btn btn-capstone btn-block'%></p>
+  
+  
+    <!--For taking a picture of the QR Code, need to put it on the answers page-->
+    <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
   </div>
-    <div class="col-md-4 text-center">
+  
+  
+    <div class="col-md-3 text-center">
     <div class="home-option">
     	<%= link_to image_tag("browse-hunts.svg", :class => "img-circle"), hunts_path %>
     	<h2>Browse Hunts</h2>
@@ -75,7 +78,7 @@
 	  	<p><%= link_to 'Join Hunts »', hunts_path, :class => 'btn btn-capstone btn-block'%> </p>
     </div>
     </div>
-    <div class="col-md-4 text-center">
+    <div class="col-md-3 text-center">
 	<div class="home-option">
         <%= link_to image_tag("paintbrush.svg", :class => "img-circle"), new_hunt_path %>
         <h2>Create a hunt</h2>
@@ -83,7 +86,19 @@
         <p><%= link_to 'Make your Own »', new_hunt_path, :class => 'btn btn-capstone btn-block'%></p>
 	</div>
     </div>
-    <div class="col-md-4 text-center">
+    
+    <!--Admin if statement goes here-->
+    <div class="col-md-3 text-center">
+	<div class="home-option">
+        <%= link_to image_tag("paintbrush.svg", :class => "img-circle"), new_hunt_path %>
+        <h2>Create QR</h2>
+        <h4>Create QR codes for hunts task</h4>
+        <p><%= link_to "New QR Code", new_qr_code_path, :class => 'btn btn-capstone btn-block'%></p>
+	</div>
+    </div>
+    
+    
+    <div class="col-md-3 text-center">
     <div class="home-option">
         <%= link_to image_tag("ipad.svg", :class => "img-circle"), demo_path %>
         <h2>Try a Tutorial</h2>
