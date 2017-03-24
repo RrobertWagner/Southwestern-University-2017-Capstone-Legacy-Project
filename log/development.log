@@ -24719,3 +24719,802 @@ Started GET "/assets/paintbrush-17a3e69ebac8880c9a419db02d1a2e06.svg" for 107.77
 
 
 Started GET "/assets/ipad-56c7a80993173b83d7050ed0ef78076a.svg" for 107.77.218.128 at 2017-03-22 16:54:47 +0000
+
+
+Started GET "/" for 107.77.218.128 at 2017-03-24 16:09:40 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 54ms
+
+
+Started GET "/users/sign_in" for 107.77.218.128 at 2017-03-24 16:09:41 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (16.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (85.8ms)
+  Rendered layouts/_navbarHeader.html.erb (1.9ms)
+Completed 200 OK in 895ms (Views: 863.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/demo-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:09:42 +0000
+
+
+Started GET "/assets/pirate-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:09:42 +0000
+
+
+Started GET "/assets/help-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:09:42 +0000
+
+
+Started GET "/assets/hunts-7112e701a904b021656c801a0b418653.css?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/assets/pirate_hunts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/assets/bootstrap-0f9bec8c59791a7f6734c23521101349.css?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/assets/pirate_tasks-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/assets/qr_codes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/users/app/assets/stylesheets/universal.css.scss" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+ActionController::RoutingError (No route matches [GET] "/users/app/assets/stylesheets/universal.css.scss"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (11.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (219.1ms)
+
+
+Started GET "/assets/tasks-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/assets/universal-6eaee8408aa9d4008475214986f8594b.css?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/assets/application-528cde4145810f513a8a71b0d84533b3.css?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/assets/flexslider-14bee2d50e121e9618d52b5cdd34267b.css?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/assets/jquery.flexslider-03c7f2a20e5a48b2de07fed78980c8c0.js?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/assets/help-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/assets/demo-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 107.77.218.128 at 2017-03-24 16:09:43 +0000
+
+
+Started GET "/assets/hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:09:44 +0000
+
+
+Started GET "/assets/pirate-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:09:44 +0000
+
+
+Started GET "/assets/pirate_hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:09:44 +0000
+
+
+Started GET "/assets/pirate_tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:09:44 +0000
+
+
+Started GET "/assets/qr_codes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:09:44 +0000
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:09:44 +0000
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:09:44 +0000
+
+
+Started GET "/assets/application-4abc3c5466b65963cb31f7a96368ca1f.js?body=1" for 107.77.218.128 at 2017-03-24 16:09:44 +0000
+
+
+Started POST "/users/sign_in" for 107.77.218.128 at 2017-03-24 16:09:59 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KQR3vvzZXkY8IBagvMQFsuWETyVgFRF2+2KxH6CKXxpbwETpaiIfsueAkPkHQNLwI59Sl/c8APW6pZMwE8PMFA==", "user"=>{"email"=>"mj-patterson@sbcglobal.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "mj-patterson@sbcglobal.net"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-03-22 16:45:53.831847"], ["current_sign_in_at", "2017-03-24 16:09:59.125715"], ["last_sign_in_ip", "64.189.15.194"], ["current_sign_in_ip", "107.77.218.128"], ["sign_in_count", 10], ["updated_at", "2017-03-24 16:09:59.129256"], ["id", 4]]
+  [1m[36m (19.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://capstone17-mpatterson.c9users.io/
+Completed 302 Found in 154ms (ActiveRecord: 21.1ms)
+
+
+Started GET "/" for 107.77.218.128 at 2017-03-24 16:09:59 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mHunt Load (0.4ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mPirateHunt Exists (0.3ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 1], ["user_id", 4]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 4], ["user_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered hunts/_hunt.html.erb (59.2ms)
+  [1m[35mPirateHunt Load (0.2ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 4]]
+  [1m[36mHunt Load (0.5ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered pirate_hunts/_pirate_hunt.html.erb (16.2ms)
+  Rendered welcome/index.html.erb within layouts/application (115.8ms)
+  Rendered layouts/_navbarHeader.html.erb (0.9ms)
+Completed 200 OK in 500ms (Views: 468.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/bootstrap-0f9bec8c59791a7f6734c23521101349.css?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/pirate-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/help-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/hunts-7112e701a904b021656c801a0b418653.css?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/demo-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/pirate_hunts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/qr_codes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/pirate_tasks-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/tasks-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/universal-6eaee8408aa9d4008475214986f8594b.css?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/application-528cde4145810f513a8a71b0d84533b3.css?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/flexslider-14bee2d50e121e9618d52b5cdd34267b.css?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/jquery.flexslider-03c7f2a20e5a48b2de07fed78980c8c0.js?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 107.77.218.128 at 2017-03-24 16:10:00 +0000
+
+
+Started GET "/assets/demo-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:10:01 +0000
+
+
+Started GET "/assets/help-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:10:01 +0000
+
+
+Started GET "/assets/hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:10:01 +0000
+
+
+Started GET "/assets/pirate-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:10:01 +0000
+
+
+Started GET "/assets/pirate_hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:10:01 +0000
+
+
+Started GET "/assets/pirate_tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:10:01 +0000
+
+
+Started GET "/assets/qr_codes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:10:01 +0000
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:10:01 +0000
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:10:01 +0000
+
+
+Started GET "/assets/application-4abc3c5466b65963cb31f7a96368ca1f.js?body=1" for 107.77.218.128 at 2017-03-24 16:10:01 +0000
+
+
+Started GET "/assets/browse-hunts-ae82c070cbd7fdcac005369660ffaf89.svg" for 107.77.218.128 at 2017-03-24 16:10:01 +0000
+
+
+Started GET "/assets/ipad-56c7a80993173b83d7050ed0ef78076a.svg" for 107.77.218.128 at 2017-03-24 16:10:01 +0000
+
+
+Started GET "/assets/paintbrush-17a3e69ebac8880c9a419db02d1a2e06.svg" for 107.77.218.128 at 2017-03-24 16:10:01 +0000
+
+
+Started GET "/" for 64.189.15.194 at 2017-03-24 16:15:53 +0000
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 64.189.15.194 at 2017-03-24 16:15:53 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (5.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.2ms)
+  Rendered layouts/_navbarHeader.html.erb (0.7ms)
+Completed 200 OK in 292ms (Views: 289.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/demo-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 64.189.15.194 at 2017-03-24 16:15:53 +0000
+
+
+Started GET "/assets/bootstrap-0f9bec8c59791a7f6734c23521101349.css?body=1" for 64.189.15.194 at 2017-03-24 16:15:53 +0000
+
+
+Started GET "/assets/help-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 64.189.15.194 at 2017-03-24 16:15:53 +0000
+
+
+Started GET "/assets/hunts-7112e701a904b021656c801a0b418653.css?body=1" for 64.189.15.194 at 2017-03-24 16:15:53 +0000
+
+
+Started GET "/assets/pirate-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 64.189.15.194 at 2017-03-24 16:15:53 +0000
+
+
+Started GET "/assets/pirate_tasks-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 64.189.15.194 at 2017-03-24 16:15:53 +0000
+
+
+Started GET "/assets/pirate_hunts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/qr_codes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/tasks-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/universal-6eaee8408aa9d4008475214986f8594b.css?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/application-528cde4145810f513a8a71b0d84533b3.css?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/flexslider-14bee2d50e121e9618d52b5cdd34267b.css?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/users/app/assets/stylesheets/universal.css.scss" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+ActionController::RoutingError (No route matches [GET] "/users/app/assets/stylesheets/universal.css.scss"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (77.0ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/jquery.flexslider-03c7f2a20e5a48b2de07fed78980c8c0.js?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/demo-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/help-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/pirate_hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/pirate-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/pirate_tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/qr_codes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/assets/application-4abc3c5466b65963cb31f7a96368ca1f.js?body=1" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+
+Started GET "/users/app/assets/stylesheets/universal.css.scss" for 64.189.15.194 at 2017-03-24 16:15:54 +0000
+
+ActionController::RoutingError (No route matches [GET] "/users/app/assets/stylesheets/universal.css.scss"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (52.2ms)
+
+
+Started GET "/" for 107.77.218.128 at 2017-03-24 16:23:06 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mHunt Load (0.3ms)[0m  SELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?  [["user_id", 4]]
+  [1m[36mPirateHunt Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPirateHunt Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 4], ["user_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered hunts/_hunt.html.erb (7.6ms)
+  [1m[36mPirateHunt Load (0.2ms)[0m  [1mSELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered pirate_hunts/_pirate_hunt.html.erb (2.7ms)
+  Rendered welcome/index.html.erb within layouts/application (37.9ms)
+  Rendered layouts/_navbarHeader.html.erb (0.8ms)
+Completed 200 OK in 298ms (Views: 292.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/demo-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:23:06 +0000
+
+
+Started GET "/assets/demo-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:23:06 +0000
+
+
+Started GET "/assets/hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:23:06 +0000
+
+
+Started GET "/assets/help-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:23:06 +0000
+
+
+Started GET "/assets/help-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:23:06 +0000
+
+
+Started GET "/assets/bootstrap-0f9bec8c59791a7f6734c23521101349.css?body=1" for 107.77.218.128 at 2017-03-24 16:23:06 +0000
+
+
+Started GET "/assets/hunts-7112e701a904b021656c801a0b418653.css?body=1" for 107.77.218.128 at 2017-03-24 16:23:06 +0000
+
+
+Started GET "/assets/pirate-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/pirate_hunts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/pirate_tasks-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/qr_codes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/tasks-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/universal-6eaee8408aa9d4008475214986f8594b.css?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/flexslider-14bee2d50e121e9618d52b5cdd34267b.css?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/application-528cde4145810f513a8a71b0d84533b3.css?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/pirate-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/pirate_hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/pirate_tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/qr_codes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/jquery.flexslider-03c7f2a20e5a48b2de07fed78980c8c0.js?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/application-4abc3c5466b65963cb31f7a96368ca1f.js?body=1" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/browse-hunts-ae82c070cbd7fdcac005369660ffaf89.svg" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/phone-ed7c36b705c9b303a7be2e8611d350dc.png" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/ipad-56c7a80993173b83d7050ed0ef78076a.svg" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/assets/paintbrush-17a3e69ebac8880c9a419db02d1a2e06.svg" for 107.77.218.128 at 2017-03-24 16:23:07 +0000
+
+
+Started GET "/" for 107.77.218.128 at 2017-03-24 16:26:12 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 1], ["user_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 4], ["user_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered hunts/_hunt.html.erb (5.6ms)
+  [1m[35mPirateHunt Load (0.1ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 4]]
+  [1m[36mHunt Load (0.1ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered pirate_hunts/_pirate_hunt.html.erb (2.4ms)
+  Rendered welcome/index.html.erb within layouts/application (122.0ms)
+  Rendered layouts/_navbarHeader.html.erb (0.6ms)
+Completed 200 OK in 363ms (Views: 357.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/demo-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:26:13 +0000
+
+
+Started GET "/assets/bootstrap-0f9bec8c59791a7f6734c23521101349.css?body=1" for 107.77.218.128 at 2017-03-24 16:26:13 +0000
+
+
+Started GET "/assets/help-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:26:13 +0000
+
+
+Started GET "/assets/hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:26:13 +0000
+
+
+Started GET "/assets/pirate-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:26:13 +0000
+
+
+Started GET "/assets/help-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:26:13 +0000
+
+
+Started GET "/assets/hunts-7112e701a904b021656c801a0b418653.css?body=1" for 107.77.218.128 at 2017-03-24 16:26:13 +0000
+
+
+Started GET "/assets/pirate-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/demo-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/pirate_hunts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/pirate_tasks-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/qr_codes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/tasks-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/universal-6eaee8408aa9d4008475214986f8594b.css?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/application-528cde4145810f513a8a71b0d84533b3.css?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/welcome-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/flexslider-14bee2d50e121e9618d52b5cdd34267b.css?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/pirate_hunts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/pirate_tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/qr_codes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/tasks-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/welcome-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/jquery.flexslider-03c7f2a20e5a48b2de07fed78980c8c0.js?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/application-4abc3c5466b65963cb31f7a96368ca1f.js?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/phone-793ab97585779456a9fc730080c9d195.svg" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/browse-hunts-ae82c070cbd7fdcac005369660ffaf89.svg" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/ipad-56c7a80993173b83d7050ed0ef78076a.svg" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/assets/paintbrush-17a3e69ebac8880c9a419db02d1a2e06.svg" for 107.77.218.128 at 2017-03-24 16:26:14 +0000
+
+
+Started GET "/qr_codes/new" for 107.77.218.128 at 2017-03-24 16:26:30 +0000
+Processing by QrCodesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered qr_codes/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navbarHeader.html.erb (1.6ms)
+Completed 200 OK in 265ms (Views: 262.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 64.189.15.194 at 2017-03-24 16:29:05 +0000
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in" for 64.189.15.194 at 2017-03-24 16:29:05 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (5.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_navbarHeader.html.erb (0.9ms)
+Completed 200 OK in 378ms (Views: 318.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/app/assets/stylesheets/universal.css.scss" for 64.189.15.194 at 2017-03-24 16:29:05 +0000
+
+ActionController::RoutingError (No route matches [GET] "/users/app/assets/stylesheets/universal.css.scss"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (67.8ms)
+
+
+Started POST "/users/sign_in" for 64.189.15.194 at 2017-03-24 16:29:07 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MGBijwYiZ35REOMfgBXKClaAMR7XIuwZTR9l3YuvU8fQiakErtkG+4MGvFFhxV1676r/hpJ1Dpy1BdlLS7+aiQ==", "user"=>{"email"=>"mj-patterson@sbcglobal.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "mj-patterson@sbcglobal.net"]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-03-24 16:09:59.125715"], ["current_sign_in_at", "2017-03-24 16:29:07.389905"], ["last_sign_in_ip", "107.77.218.128"], ["current_sign_in_ip", "64.189.15.194"], ["sign_in_count", 11], ["updated_at", "2017-03-24 16:29:07.393414"], ["id", 4]]
+  [1m[36m (15.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://capstone17-mpatterson.c9users.io/
+Completed 302 Found in 178ms (ActiveRecord: 16.4ms)
+
+
+Started GET "/" for 64.189.15.194 at 2017-03-24 16:29:07 +0000
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mHunt Load (0.2ms)[0m  [1mSELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mPirateHunt Exists (0.1ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 1], ["user_id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPirateHunt Exists (0.2ms)[0m  SELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1  [["hunt_id", 4], ["user_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered hunts/_hunt.html.erb (6.9ms)
+  [1m[35mPirateHunt Load (0.1ms)[0m  SELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?  [["user_id", 4]]
+  [1m[36mHunt Load (0.1ms)[0m  [1mSELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered pirate_hunts/_pirate_hunt.html.erb (2.4ms)
+  Rendered welcome/index.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_navbarHeader.html.erb (0.6ms)
+Completed 200 OK in 286ms (Views: 281.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/browse-hunts-ae82c070cbd7fdcac005369660ffaf89.svg" for 64.189.15.194 at 2017-03-24 16:29:07 +0000
+
+
+Started GET "/assets/paintbrush-17a3e69ebac8880c9a419db02d1a2e06.svg" for 64.189.15.194 at 2017-03-24 16:29:08 +0000
+
+
+Started GET "/assets/phone-793ab97585779456a9fc730080c9d195.svg" for 64.189.15.194 at 2017-03-24 16:29:08 +0000
+
+
+Started GET "/assets/ipad-56c7a80993173b83d7050ed0ef78076a.svg" for 64.189.15.194 at 2017-03-24 16:29:08 +0000
+
+
+Started GET "/qr_codes/new" for 64.189.15.194 at 2017-03-24 16:29:10 +0000
+Processing by QrCodesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered qr_codes/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbarHeader.html.erb (0.6ms)
+Completed 200 OK in 303ms (Views: 300.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/qr_codes" for 64.189.15.194 at 2017-03-24 16:29:15 +0000
+Processing by QrCodesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8RKt43Q6H7ZXZQBtSrD2RAVtYUfkBAoEL3cmQNbVNPonByyZAlz28LZxqEkP2hWwX5yn2U2k/ldpvasUeuFdqQ==", "qr_code"=>{"text"=>"VALUE"}, "commit"=>"Save Qr code"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered qr_codes/create.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navbarHeader.html.erb (0.8ms)
+Completed 200 OK in 437ms (Views: 331.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 107.77.218.128 at 2017-03-24 16:29:24 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mHunt Load (0.3ms)[0m  SELECT "hunts".* FROM "hunts" WHERE "hunts"."user_id" = ?  [["user_id", 4]]
+  [1m[36mPirateHunt Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 1], ["user_id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPirateHunt Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "pirate_hunts" WHERE "pirate_hunts"."hunt_id" = ? AND "pirate_hunts"."user_id" = ? LIMIT 1[0m  [["hunt_id", 4], ["user_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered hunts/_hunt.html.erb (9.9ms)
+  [1m[36mPirateHunt Load (0.2ms)[0m  [1mSELECT "pirate_hunts".* FROM "pirate_hunts" WHERE "pirate_hunts"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mHunt Load (0.2ms)[0m  SELECT  "hunts".* FROM "hunts" WHERE "hunts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered pirate_hunts/_pirate_hunt.html.erb (4.6ms)
+  Rendered welcome/index.html.erb within layouts/application (29.1ms)
+  Rendered layouts/_navbarHeader.html.erb (0.7ms)
+Completed 200 OK in 329ms (Views: 323.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/browse-hunts-ae82c070cbd7fdcac005369660ffaf89.svg" for 107.77.218.128 at 2017-03-24 16:29:25 +0000
+
+
+Started GET "/assets/ipad-56c7a80993173b83d7050ed0ef78076a.svg" for 107.77.218.128 at 2017-03-24 16:29:25 +0000
+
+
+Started GET "/assets/paintbrush-17a3e69ebac8880c9a419db02d1a2e06.svg" for 107.77.218.128 at 2017-03-24 16:29:25 +0000
