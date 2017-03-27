@@ -34,6 +34,10 @@ class PirateTask < ActiveRecord::Base #Singular because it is a class
       else
         return self, :incorrect
       end
+    elsif self.task.task_type == 1
+      if self.answer_uploaded == true
+        return self, :waiting
+      end
     else #pirate_task.task_type == 1
       if self.answer_uploaded == true
         return self, :waiting
