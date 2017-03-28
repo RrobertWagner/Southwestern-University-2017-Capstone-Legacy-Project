@@ -8,16 +8,16 @@
 	<br>
 	
 	<%= image_tag pirate_task.submission.url(:medium) %>
-
+<br /><br />
 	<%= form_for pirate_task, url: approve_pirate_task_path(pirate_task.id), method: :post do |f| %>
 		<%= f.hidden_field :id, :value => pirate_task.hunt_id %>
 		<%= f.hidden_field :completed, :value => 'true' %>
-		<%= f.submit "Approve this photo" %>
+		<%= f.submit "Approve this photo", :class => 'btn btn-capstone btn-block' %>
 	<% end %>
-
+<br /><br />
     <%= form_for pirate_task, url: reject_pirate_task_path(pirate_task.id), method: :post do |f| %>
       <%= f.hidden_field :completed, :value => 'false' %>
-      <%= f.submit 'Reject this photo' %>
+      <%= f.submit 'Reject this photo', :class => 'btn btn-red btn-capstone' %>
     <% end%>
     
 <% end %>

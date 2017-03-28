@@ -14,8 +14,7 @@ class PirateTask < ActiveRecord::Base #Singular because it is a class
     #https://www.youtube.com/watch?v=Z5W-Y3aROVE
     
     #Can add file sizes here
-  has_attached_file :submission, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.jpg"
-    
+  has_attached_file :submission, :styles => { :medium => "300x300>", :thumb => "100x100>" }
     validates_attachment :submission,
   :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }
     
@@ -27,6 +26,7 @@ class PirateTask < ActiveRecord::Base #Singular because it is a class
 #  do_not_validate_attachment_file_type :submission
 
   def check_answer
+    # For QA answers
     if self.task.task_type == 0
       if self.qa_submission == self.task.correct_answer
         self.update_attributes(:completed => true)
@@ -34,11 +34,13 @@ class PirateTask < ActiveRecord::Base #Singular because it is a class
       else
         return self, :incorrect
       end
+      # For photo answers
     elsif self.task.task_type == 1
       if self.answer_uploaded == true
         return self, :waiting
       end
-    else #pirate_task.task_type == 1
+      # For qr answers
+    elsif self.task.task_type == 2
       if self.answer_uploaded == true
         return self, :waiting
       end
