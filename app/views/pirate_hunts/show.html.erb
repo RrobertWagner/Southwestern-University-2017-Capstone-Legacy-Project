@@ -44,7 +44,7 @@
         Username : Points
         </div>
     </div>
-    <% @pirate_hunt.hunt.pirate_hunts.joins(:user).order("points DESC").each do |s| %>
+    <% @pirate_hunt.hunt.pirate_hunts.joins(:user).order("points DESC").limit(5).each do |s| %>
         <div class="row">
             <div class="col-md-10 col-md-offset-1 text-center">
                 <%= s.user.display_name =%> : <%= s.points =%>
