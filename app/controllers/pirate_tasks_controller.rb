@@ -27,6 +27,7 @@ class PirateTasksController < ApplicationController
   end
     
   def update
+   
     @pirate_task = PirateTask.find(params[:id]) #gathers info for user performing task from db
     @pirate_hunt = PirateHunt.find(@pirate_task.pirate_hunt_id) #gathers info for user about current hunt
     if @pirate_task.completed == false
@@ -36,6 +37,9 @@ class PirateTasksController < ApplicationController
         @pirate_hunt.update_attributes(:points => @pirate_hunt.points + @pirate_task.task.points) #had to use update attributes and then
                                                                                                   #funnel in the parameter to update.  Needed above gathers
                                                                                                   # to be able to use and update the db information
+        if @pirate_task.task.points > 0
+          @pirate_task.task.update_attributes(:points => @pirate_task.task.points - 10)
+        end
         redirect_to({:action => 'show', :id => @pirate_task.id},notice: "Submission correct! Task completed")
       elsif status == :incorrect
         redirect_to({:action => 'show', :id => @pirate_task.id}, alert:"Answer incorrect, try again")
