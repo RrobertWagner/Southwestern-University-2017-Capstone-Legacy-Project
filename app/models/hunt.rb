@@ -37,8 +37,13 @@ class Hunt < ActiveRecord::Base #Singular because it is a class
     end
   end
   
+  #search
   def self.search(search)
-    where("title LIKE ? OR start_location LIKE ?", "%#{search}%", "%#{search}%")
+    #searches by title, location, or username
+    joins("INNER JOIN users ON users.id = hunts.user_id").where("title LIKE ? OR start_location LIKE ? OR display_name LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
+   
+    #what I had previously - idk i'm just attached to it i feel wrong deleting it 
+    #where("title LIKE ? OR start_location LIKE ? OR self.user.display_name LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
   end
 
 end
