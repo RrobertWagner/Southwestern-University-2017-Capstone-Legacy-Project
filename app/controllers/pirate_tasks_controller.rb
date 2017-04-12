@@ -29,6 +29,7 @@ class PirateTasksController < ApplicationController
   def update
     @pirate_task = PirateTask.find(params[:id]) #gathers info for user performing task from db
     @pirate_hunt = PirateHunt.find(@pirate_task.pirate_hunt_id) #gathers info for user about current hunt
+    @pirate_task.update_attribute(:qr_photo, params[:pirate_task][:qr_photo])
     if @pirate_task.completed == false
       @pirate_task.update_attributes(pirate_task_params)
       @pirate_task, status = @pirate_task.check_answer

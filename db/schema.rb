@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170306015543) do
+ActiveRecord::Schema.define(version: 20170329164903) do
 
   create_table "hunts", force: :cascade do |t|
     t.string   "title"
@@ -52,6 +52,10 @@ ActiveRecord::Schema.define(version: 20170306015543) do
     t.datetime "submission_updated_at"
     t.integer  "pirate_hunt_id"
     t.string   "qa_submission"
+    t.string   "qr_photo_file_name"
+    t.string   "qr_photo_content_type"
+    t.integer  "qr_photo_file_size"
+    t.datetime "qr_photo_updated_at"
   end
 
   add_index "pirate_tasks", ["pirate_hunt_id"], name: "index_pirate_tasks_on_pirate_hunt_id"

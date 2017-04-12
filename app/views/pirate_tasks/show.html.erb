@@ -70,28 +70,22 @@
 						</div>
 			<%end%>
 			
-		
+		<!-- Only runs if the question is a QR code answer -->
 			<%if @pirate_task.task.task_type == 2 %>
+			        <script type="text/javascript" src="http://www.webqr.com/llqrcode.js"></script>
+					<script type="text/javascript" src="http://www.webqr.com/webqr.js"></script>
 				<!-- This is only a thing when there is a photo question -->
 				<%= form_for @pirate_task, html: { multipart: true} do |f| %>
 					  <div class="field">
 					  	<!--THis is QR TEST-->
-						<%= f.file_field :submission%>
+						<%= f.file_field :qr_photo %>
                         <%= f.hidden_field :answer_uploaded, :value => true%>
-                        <!--<input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">-->
-					  </div>
 					<div class="actions">
 						<%= f.hidden_field :answer_uploaded, :value => true%>   
 						<%= f.submit "Upload Submission", class: "btn btn-capstone btn-block" %>
 					  </div>
 				<% end %> <!-- ends form-->
-				
-				  <!--  <h4>Your Submission:</h4>-->
-
-                        <div class="photo">
-						<%= image_tag @pirate_task.submission.url(:medium) %>
-						<br>
-						</div>
+				<!--Removing it showing the submission, just a picture of a QR code and doesn't need approval so it is pointless-->
 			<%end%>
 			
 			
