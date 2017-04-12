@@ -10,7 +10,7 @@
 	<div class="row">
 		<div class="col-sm-12" style="padding:0;">
             <%= form_tag(hunts_path, :method => "get", id: "search-form") do %>
-                <%= text_field_tag :search, params[:search], placeholder: "Search by hunt title or location" %>
+                <%= text_field_tag :search, params[:search], placeholder: "Search by hunt title, creator, or location" %>
                 <%= submit_tag "Search", :name => nil, :class => 'btn-capstone' %>
             <% end %>
         </div>
