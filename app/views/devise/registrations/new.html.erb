@@ -42,12 +42,15 @@ color: 000;
 				  
 				  <div class="field">
         			<%= f.label :admin_password, "If you believe you should be an admin, enter the admin password below." %><br />
-					<%= f.password_field :admin_password, autocomplete: "off" %>
+        			<% puts "Before the if" %>
         			<% if @validatable %>
+        				<% puts "We are in the if" %>
 						<%= f.hidden_field :admin, :value => true %> 
-					<%else %>
-						<%= f.hidden_field :admin, :value => false %> 
+					<% else @validatable %>
+        				<% puts "We are in the else" %>
+						<%= f.hidden_field :admin, :value => false %>	
 					<% end %><br />
+					<%= f.password_field :admin_password, autocomplete: "off" %>
 					
 					
     			  </div>
