@@ -41,9 +41,8 @@ class Hunt < ActiveRecord::Base #Singular because it is a class
   def self.search(search)
     #searches by title, location, or username
     joins("INNER JOIN users ON users.id = hunts.user_id").where("title LIKE ? OR start_location LIKE ? OR display_name LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
-   
-    #what I had previously - idk i'm just attached to it i feel wrong deleting it 
-    #where("title LIKE ? OR start_location LIKE ? OR self.user.display_name LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
+    #joining on users.id = hunts.id causes huge issues because those fields don't match up,
+    #so I use users.id = hunts.user_id
   end
 
 end
