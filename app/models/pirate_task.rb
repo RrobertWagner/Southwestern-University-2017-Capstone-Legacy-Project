@@ -5,6 +5,7 @@ a Pirate Hunt that should belong to that same User. A Pirate Task also belongs t
 personalized copy of and the Hunt that that Task belongs to. Pirate Tasks can have file attached to them
 for submissions such as Photos, so code related to that is used as well.
 =end
+
 class PirateTask < ActiveRecord::Base #Singular because it is a class
   #I think 'index:true' syntax only applies if you declare the association in the migration file
   belongs_to :user #, index:true
@@ -14,9 +15,13 @@ class PirateTask < ActiveRecord::Base #Singular because it is a class
     #https://www.youtube.com/watch?v=Z5W-Y3aROVE
     
     #Can add file sizes here
-  has_attached_file :submission, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.jpg"
-    
+  has_attached_file :submission, :styles => { :medium => "300x300>", :thumb => "100x100>" }
     validates_attachment :submission,
+  :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }
+  
+  has_attached_file :qr_photo, :styles => { :medium => "300x300>", :thumb => "100x100>" }, 
+    :default_url => "/images/:styles/no_upload.png"
+    validates_attachment :qr_photo,
   :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }
     
 # Validate content type
@@ -27,6 +32,7 @@ class PirateTask < ActiveRecord::Base #Singular because it is a class
 #  do_not_validate_attachment_file_type :submission
 
   def check_answer
+    # For QA answers
     if self.task.task_type == 0
       if self.qa_submission == self.task.correct_answer
         self.update_attributes(:completed => true)
@@ -34,9 +40,20 @@ class PirateTask < ActiveRecord::Base #Singular because it is a class
       else
         return self, :incorrect
       end
-    else #pirate_task.task_type == 1
+      # For photo answers
+    elsif self.task.task_type == 1
       if self.answer_uploaded == true
         return self, :waiting
+      end
+      # For qr answers
+    elsif self.task.task_type == 2
+      if self.answer_uploaded == true
+        # Reading QR Value to check if the value of the image uplaoded matches the correct value indicated
+        if ( ZXing.decode self.qr_photo.path() ) == self.task.correct_answer
+          return self, :correct
+        else
+          return self, :incorrect
+        end
       end
     end
   end

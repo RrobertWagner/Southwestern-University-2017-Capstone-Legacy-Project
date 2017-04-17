@@ -47,5 +47,15 @@ table.qr-code td {
 }
 table.qr-code td.black { background-color: #000; }
 table.qr-code td.white { background-color: #fff; }
+
+#qr-canvas {
+display: none;
+}
+#result {
+border: solid;
+border-width: 1px 1px 1px 1px;
+padding: 20px;
+width: 70%;
+}
  
  
