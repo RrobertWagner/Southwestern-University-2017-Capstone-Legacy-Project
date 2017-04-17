@@ -26,7 +26,18 @@ class User < ActiveRecord::Base
     end
   end
 #password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d). /)
-  
+
+   validate :admin_password_complexity
+    
+    def admin_password_complexity
+        if admin_password.present?
+            if !admin_password.match("pirateAdmin")
+                #length requirements already work, but to combine them into this regex in the future, do:
+                #remove the plus after last \S, then write { 8,128} (need to confirm)
+                errors.add :admin_password, "Are you sure you are supposed to be an admin?"
+            end
+        end
+    end
   
   has_many :hunts #this is for pirate id
   has_many :pirate_hunts, :dependent => :destroy
@@ -51,6 +62,20 @@ class User < ActiveRecord::Base
             end
         end
     end
+    
+   validate :admin_password_match
+    
+    def admin_password_match
+        if admin_password.present?
+            if !admin_password.match("pirateAdmin")
+                #length requirements already work, but to combine them into this regex in the future, do:
+                #remove the plus after last \S, then write { 8,128} (need to confirm)
+                errors.add :admin_password, "Are you sure you are supposed to be an admin?"
+            end
+        end
+    end
+    
+    
     
     
     
