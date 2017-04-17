@@ -7,9 +7,9 @@
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1 text-center">
 			<h3><%= @pirate_hunt.hunt.title %></h3> 
-			<%= @pirate_hunt.hunt.description%><%#The description will be directly beneath the hunt title for easy readability%>						
+			<p style="padding:0;"><%= @pirate_hunt.hunt.description%></p><%#The description will be directly beneath the hunt title for easy readability%>						
 			<br>
-			This hunt starts at <%=@pirate_hunt.hunt.start_location%>
+			<p style="padding:0;">This hunt starts at <%=@pirate_hunt.hunt.start_location%></p>
 			
 			<!-- time format information 
 			- %I - Hour of the day, 12-hour clock, zero-padded (01..12)
@@ -18,8 +18,8 @@
 			-->
 
 			<%#This displays the start and end times of the hunt%>
-			The hunt begins on <%= @pirate_hunt.hunt.start_date.to_s(:long)%> at <%= @pirate_hunt.hunt.start_time.strftime("%I:%M %p") %> and <br> ends on 			
-			<%= @pirate_hunt.hunt.end_date.to_s(:long)%> at <%=@pirate_hunt.hunt.end_time.strftime("%I:%M %p")%>
+			<p style="padding:0;">The hunt begins on <%= @pirate_hunt.hunt.start_date.to_s(:long)%> at <%= @pirate_hunt.hunt.start_time.strftime("%I:%M %p") %> and ends on 			
+			<%= @pirate_hunt.hunt.end_date.to_s(:long)%> at <%=@pirate_hunt.hunt.end_time.strftime("%I:%M %p")%></p>
 
 			<%if @pirate_hunt.hunt.active == true%>
 				<%unless @photo_tasks.empty?%>
@@ -37,20 +37,33 @@
 			<%end%>	
 	<br>	
 			
-	<h3>Your Current Points:  <%= @pirate_hunt.points =%> </h3> 
-			<b>Leaderboard</b>
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1 text-center">
-        Username : Points
-        </div>
-    </div>
-    <% @pirate_hunt.hunt.pirate_hunts.joins(:user).order("points DESC").limit(5).each do |s| %>
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1 text-center">
-                <%= s.user.display_name =%> : <%= s.points =%>
-            </div>
-        </div>
-    <% end %>
+	<h4>Your Current Points:  <%= @pirate_hunt.points =%> </h4> <hr />
+	
+		<h3>Leaderboard</h3>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="col-md-12 text-center">
+						<div class="col-xs-6">
+							<h4>Username</h4>
+						</div>
+						<div class="col-xs-6">
+							<h4>Points</h4>
+						</div>
+		        	</div>
+		        	<% @pirate_hunt.hunt.pirate_hunts.joins(:user).order("points DESC").limit(5).each do |s| %>
+		        	<div class="leaderboard">
+			        	<div class="col-md-12 text-center">
+				        	<div class="col-xs-6">
+								<h4><%= s.user.display_name =%></h4>
+							</div>
+							<div class="col-xs-6">
+								<h4><%= s.points =%></h4>
+							</div>
+			            </div>
+		        	</div>
+	            	<% end %>
+				</div>
+			</div>	
 <br>
 
 
@@ -61,3 +74,5 @@
 	</div>
 </div>
 
+<br />
+<br />

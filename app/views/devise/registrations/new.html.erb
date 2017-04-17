@@ -39,6 +39,18 @@ color: 000;
 					<%= f.label :password_confirmation %><br />
 					<%= f.password_field :password_confirmation, autocomplete: "off" %>
 				  </div>
+				  
+				  <div class="field">
+        			<%= f.label :admin_password, "If you believe you should be an admin, enter the admin password below." %><br />
+					<%= f.password_field :admin_password, autocomplete: "off" %>
+        			<% if @validatable %>
+						<%= f.hidden_field :admin, :value => true %> 
+					<%else %>
+						<%= f.hidden_field :admin, :value => false %> 
+					<% end %><br />
+					
+					
+    			  </div>
 
 				  <div class="actions">
 					<%= f.submit "Sign up", :class => 'btn btn-capstone btn-block' %>

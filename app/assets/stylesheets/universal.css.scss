@@ -203,6 +203,18 @@ body{
   opacity: 0.8;
 }
 
+.btn-yellow {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+  color: white;
+}
+
+.btn-yellow:hover, .btn-yellow:focus {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+  opacity: 0.8;
+}
+
 // Updating the styles for new user interface
 
 .home-option {
@@ -351,8 +363,16 @@ color: #fff;
 font-size: 30px; 
 }
 
+/* Leaderboard Styles
+--------------------------- */
 
+.align-left {
+  text-align: left;
+}
 
+.align-right {
+  text-align: right;
+}
 
 
 

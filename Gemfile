@@ -31,11 +31,10 @@ gem 'devise', '~> 3.4.1'
 gem 'paperclip', '~> 4.2.1'
 
 
-#Adding in barby ( for qr code generating)
+#Adding in gems to assist with qr code generating and scanning 
 gem 'barby'
 gem 'chunky_png'
 gem 'rqrcode'
-
 gem 'zxing'
 
 #adding in a different generator gem, updated
