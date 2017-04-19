@@ -40,21 +40,22 @@ color: 000;
 					<%= f.password_field :password_confirmation, autocomplete: "off" %>
 				  </div>
 				  
-				  <div class="field">
-        			<%= f.label :admin_password, "If you believe you should be an admin, enter the admin password below." %><br />
-        			<% puts "Before the if" %>
-        			<% if @validatable %>
-        				<% puts "We are in the if" %>
-						<%= f.hidden_field :admin, :value => true %> 
-					<% else @validatable %>
-        				<% puts "We are in the else" %>
-						<%= f.hidden_field :admin, :value => false %>	
-					<% end %><br />
-					<%= f.password_field :admin_password, autocomplete: "off" %>
+				 <!-- <div class="field">-->
+     <!--   			<%= f.label :admin_password, "If you believe you should be an admin, enter the admin password below." %><br />-->
+     <!--   			<% puts "Before the if" %>-->
+     <!--   			<% if @validates %>-->
+     <!--   				<% puts "We are in the if" %>-->
+					<!--	<%= f.hidden_field :admin, :value => true %> -->
+					<!--<% else %>-->
+     <!--   				<% puts "We are in the else" %>-->
+					<!--	<%= f.hidden_field :admin, :value => false %>	-->
+					<!--<% end %><br />-->
+					<!--<%= f.password_field :admin_password, autocomplete: "off" %>-->
 					
 					
-    			  </div>
-
+    	<!--		  </div>-->
+				
+					
 				  <div class="actions">
 					<%= f.submit "Sign up", :class => 'btn btn-capstone btn-block' %>
 				  </div>

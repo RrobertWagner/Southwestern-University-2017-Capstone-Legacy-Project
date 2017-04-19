@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   
- 
+# params.require(:user).permit(:admin, :admin_password)
  
 #  I put in this code to heighten password complexity requirements,
 #  but it seems to be too restrictive?
@@ -27,17 +27,23 @@ class User < ActiveRecord::Base
   end
 #password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d). /)
 
-   validate :admin_password_complexity
+   validates :admin_password, with: @admin_password_match
+   
     
-    def admin_password_complexity
-        if admin_password.present?
-            if !admin_password.match("pirateAdmin")
-                #length requirements already work, but to combine them into this regex in the future, do:
-                #remove the plus after last \S, then write { 8,128} (need to confirm)
-                errors.add :admin_password, "Are you sure you are supposed to be an admin?"
-            end
-        end
-    end
+    # def admin_password_match
+    #     puts "We get in the definition"
+    #     if admin_password.present?
+    #         if admin_password.match("pirateAdmin")
+    #             puts "got to if in user"
+    #             return true 
+    #         else
+    #             puts "got to esle in user"
+    #             return false
+    #         end
+    #     else
+    #         return false
+    #     end
+    # end
   
   has_many :hunts #this is for pirate id
   has_many :pirate_hunts, :dependent => :destroy
@@ -63,17 +69,24 @@ class User < ActiveRecord::Base
         end
     end
     
-   validate :admin_password_match
     
-    def admin_password_match
-        if admin_password.present?
-            if !admin_password.match("pirateAdmin")
-                #length requirements already work, but to combine them into this regex in the future, do:
-                #remove the plus after last \S, then write { 8,128} (need to confirm)
-                errors.add :admin_password, "Are you sure you are supposed to be an admin?"
-            end
-        end
-    end
+   validates :admin_password, with: @admin_password_match
+   
+    
+    # def admin_password_match
+    #     puts "We get in the definition"
+    #     if admin_password.present?
+    #         if admin_password.match("pirateAdmin")
+    #             puts "got to if in user"
+    #             return true 
+    #         else
+    #             puts "got to esle in user"
+    #             return false
+    #         end
+    #     else
+    #         return false
+    #     end
+    # end
     
     
     
@@ -85,3 +98,7 @@ class User < ActiveRecord::Base
     #attr_accessible :display_name
     #accepts_nested_attributes_for :user, allow_destroy: true 
 end
+
+# def create
+#   User.create!(params.require(:user).permit(:admin, :admin_password))
+# end
